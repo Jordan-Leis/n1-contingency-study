@@ -1,0 +1,14 @@
+[project]
+name = "n1-contingency-study"
+version = "0.1.0"
+description = "Scripted AC load flow, N-1 contingency screening and solar hosting-capacity sweep on an IEEE test case (pandapower)."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "pandapower",
+    "pandas",
+    "matplotlib",
+]
+
+[dependency-groups]
+dev = ["pytest"]

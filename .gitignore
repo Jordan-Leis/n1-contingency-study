@@ -8,3 +8,5 @@ __pycache__/
 .ruff_cache/
 target/
 node_modules/
+# the study memo is the one PDF this repo publishes
+!memo/study_memo.pdf
