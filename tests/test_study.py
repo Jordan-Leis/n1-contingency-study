@@ -123,6 +123,17 @@ def test_warm_start_used_after_a_first_solve():
     assert solve(net, True) == "warm-start NR"
 
 
+def test_solver_divergence_is_a_result_not_a_crash(monkeypatch):
+    import numpy as np
+    import pandapower as pp
+
+    def diverged(*a, **k):
+        raise np.linalg.LinAlgError("Array must not contain infs or NaNs")
+
+    monkeypatch.setattr(pp, "runpp", diverged)
+    assert solve(load_case(), True) is None
+
+
 def test_bus_numbers_are_ieee_not_pandapower_indices():
     net = load_case()
     assert bus_idx(net, 39) == 38

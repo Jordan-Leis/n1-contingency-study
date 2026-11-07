@@ -4,6 +4,7 @@ import io
 import logging
 import warnings
 
+import numpy as np
 import pandapower as pp
 import pandapower.networks as nw
 
@@ -64,6 +65,6 @@ def solve(net, qlims):
             with contextlib.redirect_stdout(io.StringIO()):  # Iwamoto prints every iteration
                 pp.runpp(net, enforce_q_lims=qlims, numba=False, **kw)
             return name
-        except pp.LoadflowNotConverged:
-            continue
+        except (pp.LoadflowNotConverged, np.linalg.LinAlgError):
+            continue  # Iwamoto raises LinAlgError when it diverges to NaN
     return None
