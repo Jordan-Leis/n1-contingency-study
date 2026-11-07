@@ -1,0 +1,32 @@
+{
+  "total_load_mw": 6254.23,
+  "total_load_mvar": 1387.1,
+  "total_gen_mw": 6297.8575,
+  "losses_mw": 43.6275,
+  "losses_pct_of_load": 0.6976,
+  "vm_min_pu": 0.982,
+  "vm_min_bus": 31,
+  "vm_max_pu": 1.0636,
+  "vm_max_bus": 36,
+  "buses_above_band": [
+    19,
+    22,
+    25,
+    26,
+    28,
+    29,
+    36
+  ],
+  "buses_below_band": [],
+  "peak_branch": "Xfmr 10-32",
+  "peak_branch_loading_pct": 77.0159,
+  "branches_over_100pct": 0,
+  "slack_p_mw": 677.8575,
+  "slack_p_max_mw": 646.0,
+  "machines_at_q_limit": [
+    "Gen 37"
+  ],
+  "total_headroom_mw": 1101.0,
+  "gen30_headroom_mw": 790.0,
+  "headroom_excl_gen39_mw": 1001.0
+}

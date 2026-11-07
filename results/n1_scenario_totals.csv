@@ -1,0 +1,5 @@
+scenario,contingencies,no_solution,implausible_solution,with_load_lost,with_islanding,with_overload,with_voltage_violation,clean,worst_overload_pct,worst_overload_contingency,worst_overload_element,lowest_vm_pu,highest_vm_pu,caused_violation_rows
+shared_qlim,56,1,0,3,11,24,13,22,157.7194,Line 21-22,Line 23-24,0.9143,1.0797,58
+shared_noqlim,56,1,0,3,11,24,13,22,157.5361,Line 21-22,Line 23-24,0.9150,1.0798,51
+single_qlim,56,0,1,3,11,14,14,28,157.7194,Line 21-22,Line 23-24,0.9075,1.0797,49
+single_noqlim,56,1,0,3,11,14,13,29,157.5361,Line 21-22,Line 23-24,0.9078,1.0798,41

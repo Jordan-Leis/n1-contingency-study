@@ -1,0 +1,44 @@
+{
+  "pandapower_contingency_tool": {
+    "scope": "line and transformer outages, single slack, no Q limits",
+    "cases_compared": 45,
+    "cases_not_compared": [
+      "Xfmr 6-31 (strands the slack)",
+      "all generator outages"
+    ],
+    "max_abs_diff_vm_pu": 2.63079e-10,
+    "max_abs_diff_line_loading_pct": 1.70207e-07,
+    "max_abs_diff_trafo_loading_pct": 2.71215e-08
+  },
+  "independent_newton": {
+    "contingency": "Line 21-22",
+    "newton_iterations": 4,
+    "max_abs_diff_vm_pu": 2.43128e-11,
+    "max_abs_diff_angle_deg": 2.28985e-09
+  },
+  "hand": {
+    "cutset_line_21_22": {
+      "pocket_gen_minus_load_mw": 962.5,
+      "line_23_24_rating_mva": 600.0,
+      "hand_estimate_loading_pct": 160.4167,
+      "solved_line_23_24_p_mw": 958.4827,
+      "solved_loading_pct": 157.7194
+    },
+    "island_xfmr_19_20": {
+      "hand_load_lost_mw": 680.0,
+      "study_load_lost_mw": 680.0,
+      "hand_gen_lost_mw": 508.0,
+      "study_gen_lost_mw": 508.0,
+      "hand_slack_estimate_mw": 505.8575,
+      "study_slack_mw": 507.3668
+    },
+    "single_slack_pickup_gen_38": {
+      "lost_mw": 830.0,
+      "slack_before_mw": 677.8575,
+      "slack_after_mw": 1523.804,
+      "pickup_mw": 845.9465,
+      "implied_extra_losses_mw": 15.9465,
+      "slack_p_max_mw": 646.0
+    }
+  }
+}

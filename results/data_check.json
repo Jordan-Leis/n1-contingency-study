@@ -1,0 +1,66 @@
+{
+  "case14": {
+    "case": "IEEE 14-bus",
+    "buses": 14,
+    "lines": 15,
+    "transformers": 5,
+    "generators_incl_slack": 5,
+    "line_max_i_ka_min": 42.339,
+    "line_max_i_ka_max": 27479.6522,
+    "line_rating_mva_min": 9900.0,
+    "line_rating_mva_max": 9900.0,
+    "trafo_sn_mva_min": 9900.0,
+    "trafo_sn_mva_max": 9900.0,
+    "base_peak_line_loading_pct": 1.51,
+    "base_peak_trafo_loading_pct": 0.45,
+    "gen_setpoints_above_1p05": {
+      "1": 1.06,
+      "6": 1.07,
+      "8": 1.09
+    },
+    "base_buses_above_1p05": [
+      1,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "base_buses_below_0p95": [],
+    "base_vm_max": 1.09,
+    "base_vm_min": 1.01
+  },
+  "case39": {
+    "case": "IEEE 39-bus",
+    "buses": 39,
+    "lines": 35,
+    "transformers": 11,
+    "generators_incl_slack": 10,
+    "line_max_i_ka_min": 0.8033,
+    "line_max_i_ka_max": 2.0082,
+    "line_rating_mva_min": 480.0,
+    "line_rating_mva_max": 1200.0,
+    "trafo_sn_mva_min": 500.0,
+    "trafo_sn_mva_max": 1800.0,
+    "base_peak_line_loading_pct": 73.37,
+    "base_peak_trafo_loading_pct": 77.02,
+    "gen_setpoints_above_1p05": {
+      "36": 1.0636
+    },
+    "base_buses_above_1p05": [
+      19,
+      22,
+      25,
+      26,
+      28,
+      29,
+      36
+    ],
+    "base_buses_below_0p95": [],
+    "base_vm_max": 1.0636,
+    "base_vm_min": 0.982
+  }
+}
