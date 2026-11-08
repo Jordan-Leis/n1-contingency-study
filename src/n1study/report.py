@@ -32,7 +32,8 @@ def fmt_mw(x):
 
 def outcome(row):
     if row.status == "no_solution":
-        return f"No AC solution found ({fmt_mw(row.gen_lost_mw)} MW lost)"
+        boundary = " Model boundary: bus 39 is the external-system equivalent" if row.label == "Gen 39" else ""
+        return f"No AC solution found ({fmt_mw(row.gen_lost_mw)} MW lost).{boundary}"
     if row.status == "implausible_solution":
         return "Solver returned a non-physical answer"
     if isinstance(row.islanded_buses, str) and row.islanded_buses:
@@ -43,6 +44,8 @@ def outcome(row):
 
 
 def worst(row):
+    if row.status != "solved":
+        return "not assessed (no solution)"
     parts = []
     if row.overloads > 0:
         more = f" (+{row.overloads - 1} more)" if row.overloads > 1 else ""
@@ -78,6 +81,14 @@ def scenario_table(d):
 
 
 def _limit(r):
+    worse = isinstance(r.limit_reference, float) and r.limit_reference == r.limit_reference and (
+        (r.limit_kind == "overload" and r.limit_reference > C.THERMAL_LIMIT_PCT) or
+        (r.limit_kind == "high_voltage" and r.limit_reference > C.V_MAX_PU) or
+        (r.limit_kind == "low_voltage" and r.limit_reference < C.V_MIN_PU))
+    if worse and r.limit_kind == "overload":
+        return f"{r.limit_element} {r.limit_reference:.1f}% \u2192 {r.limit_value:.1f}% with {r.limit_contingency} out"
+    if worse:
+        return f"{r.limit_element} {r.limit_reference:.3f} \u2192 {r.limit_value:.3f} pu with {r.limit_contingency} out"
     if r.capped:
         return "nothing up to the sweep cap"
     if r.limit_kind in ("no_solution", "implausible_solution"):
@@ -103,43 +114,57 @@ def _mw(r):
 def hosting_table(d):
     h = d["host"]
     get = lambda disp, bus, dfn: h[(h.dispatch == disp) & (h.bus == bus) & (h.definition == dfn)].iloc[0]
-    lines = ["| Bus | Screening MW, shared back-off | What stops it | Screening MW, swing-only back-off | No-outage only, shared | Any new crossing, shared |",
-             "|---:|---:|---|---:|---:|---:|"]
+    lines = ["| Bus | N-1 rule, all back off | What stops it first | N-1 rule, swing only | New problems only, all back off | New problems only, swing only | No outage, all back off | Any new crossing |",
+             "|---:|---:|---|---:|---:|---:|---:|---:|"]
     for b in C.HOSTING_BUSES:
-        s, g = get("shared", b, "screening"), get("single", b, "screening")
-        lines.append(f"| {b} | {_mw(s)} | {_limit(s)} | {_mw(g)} | {_mw(get('shared', b, 'no_outage_only'))} | "
-                     f"{_mw(get('shared', b, 'any_new'))} |")
+        s = get("shared", b, "screening")
+        lines.append(f"| {b} | {_mw(s)} | {_limit(s)} | {_mw(get('single', b, 'screening'))} | "
+                     f"{_mw(get('shared', b, 'new_only'))} | {_mw(get('single', b, 'new_only'))} | "
+                     f"{_mw(get('shared', b, 'no_outage_only'))} | {_mw(get('shared', b, 'any_new'))} |")
     return "\n".join(lines)
 
 
+RULES = (("new_only", "New problems only (upper bound)", "#2a78d6"),
+         ("screening", "Also existing problems made worse (N-1 study rule)", "#eb6834"))
+
+
 def hosting_chart(d, path):
-    h = d["host"][d["host"].definition == "screening"]
+    h = d["host"]
     buses = list(C.HOSTING_BUSES)
-    fig, ax = plt.subplots(figsize=(7.2, 3.5), dpi=170)
+    fig, axes = plt.subplots(1, 2, figsize=(8.4, 3.7), dpi=170, sharey=True)
     fig.patch.set_facecolor(SURFACE)
-    ax.set_facecolor(SURFACE)
     bar_h = 0.36
-    for k, (disp, label) in enumerate((("shared", "All machines back off"), ("single", "Only the swing machine backs off"))):
-        for i, b in enumerate(buses):
-            r = h[(h.dispatch == disp) & (h.bus == b)].iloc[0]
-            y = i + (k - 0.5) * (bar_h + 0.04)
-            ax.barh(y, max(r.hosting_mw, 0.0), height=bar_h, color=SERIES[disp], label=label if i == 0 else None,
-                    edgecolor=SURFACE, linewidth=1.0)
-            ax.text(max(r.hosting_mw, 0.0) + 12, y, host_text(r.hosting_mw, r.capped),
-                    va="center", fontsize=7.6, color=INK)
-    ax.set_yticks(range(len(buses)), [f"Bus {b}" for b in buses], fontsize=8, color=INK)
-    ax.invert_yaxis()
-    ax.set_xlabel("Solar MW the bus takes before a new N-1 problem appears (50 MW steps)", fontsize=8, color=MUTED)
-    ax.tick_params(axis="x", labelsize=7.6, colors=MUTED)
-    ax.tick_params(axis="y", length=0)
-    ax.grid(axis="x", color=GRID, lw=0.6)
-    ax.set_axisbelow(True)
-    for s in ("top", "right", "left"):
-        ax.spines[s].set_visible(False)
-    ax.spines["bottom"].set_color(GRID)
-    ax.set_xlim(0, max(700, h.hosting_mw.max() + 120))
-    ax.set_title("Screening estimate of solar hosting capacity, IEEE 39-bus", fontsize=9.5, color=INK, loc="left")
-    ax.legend(frameon=False, fontsize=7.6, loc="lower right", labelcolor=MUTED)
+    xmax = h[h.definition.isin(["new_only", "screening"])].hosting_mw.max() + 140
+    for ax, (disp, title) in zip(axes, (("shared", "All machines back off for the solar"),
+                                        ("single", "Only the swing machine backs off"))):
+        ax.set_facecolor(SURFACE)
+        for k, (dfn, label, color) in enumerate(RULES):
+            for i, b in enumerate(buses):
+                r = h[(h.dispatch == disp) & (h.bus == b) & (h.definition == dfn)].iloc[0]
+                y = i + (k - 0.5) * (bar_h + 0.04)
+                ax.barh(y, max(r.hosting_mw, 0.0), height=bar_h, color=color, label=label if i == 0 else None,
+                        edgecolor=SURFACE, linewidth=1.0)
+                ax.text(max(r.hosting_mw, 0.0) + 10, y, host_text(r.hosting_mw, r.capped), va="center",
+                        fontsize=7.2, color=INK)
+        ax.set_title(title, fontsize=8.6, color=INK, loc="left")
+        ax.set_yticks(range(len(buses)), [f"Bus {b}" for b in buses], fontsize=8, color=INK)
+        ax.tick_params(axis="x", labelsize=7.4, colors=MUTED)
+        ax.tick_params(axis="y", length=0)
+        ax.grid(axis="x", color=GRID, lw=0.6)
+        ax.set_axisbelow(True)
+        for s in ("top", "right", "left"):
+            ax.spines[s].set_visible(False)
+        ax.spines["bottom"].set_color(GRID)
+        ax.set_xlim(0, xmax)
+    axes[0].invert_yaxis()
+    fig.supxlabel("Solar MW at unity power factor before the rule fails, all N-1 outages checked (50 MW steps)",
+                  fontsize=8, color=MUTED, y=0.1)
+    fig.suptitle("Screening estimate of solar hosting capacity, IEEE 39-bus", fontsize=9.8, color=INK, x=0.01,
+                 ha="left", y=0.99)
+    handles, labels = axes[0].get_legend_handles_labels()
+    fig.legend(handles, labels, frameon=False, fontsize=7.6, loc="lower center", ncol=2, labelcolor=MUTED,
+               bbox_to_anchor=(0.5, -0.02))
+    fig.tight_layout(rect=(0, 0.1, 1, 0.95))
     fig.savefig(path, bbox_inches="tight", facecolor=SURFACE, metadata={"Software": None})
     plt.close(fig)
 
@@ -150,7 +175,7 @@ def fill_readme(d):
     text = README.read_text()
     blocks = {"n1_table": n1_table(d), "scenario_table": scenario_table(d), "hosting_table": hosting_table(d)}
     for name, body in blocks.items():
-        text = re.sub(rf"(<!-- {name} -->\n).*?(\n<!-- /{name} -->)", lambda m: m.group(1) + body + m.group(2),
+        text = re.sub(rf"(<!-- {name} -->\n).*?(<!-- /{name} -->)", lambda m: m.group(1) + body + "\n" + m.group(2),
                       text, flags=re.S)
     README.write_text(text)
 

@@ -35,7 +35,7 @@ def test_base_case_power_balance(base):
     assert gen == pytest.approx(base.res_load.p_mw.sum() + losses, abs=1e-6)
 
 
-def test_ratings_are_real_not_placeholders(base):
+def test_ratings_are_not_placeholders(base):
     # The reason this case was chosen over case14 (9,900 MVA placeholders).
     mva = 3 ** 0.5 * 345 * base.line.max_i_ka
     assert mva.max() < 2000 and base.trafo.sn_mva.max() < 2000

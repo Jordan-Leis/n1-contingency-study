@@ -1,37 +1,49 @@
 dispatch,bus,definition,hosting_mw,capped,limit_mw,limit_contingency,limit_element,limit_kind,limit_value,limit_reference
 shared,3,any_new,0.0000,False,50.0000,Line 6-7,Bus 28,high_voltage,1.0504,1.0500
-shared,3,screening,300.0000,False,350.0000,Line 2-3,Bus 26,high_voltage,1.0555,1.0456
+shared,3,screening,100.0000,False,150.0000,Line 3-4,Bus 3,high_voltage,1.0576,1.0524
+shared,3,new_only,300.0000,False,350.0000,Line 2-3,Bus 26,high_voltage,1.0555,1.0456
 shared,3,no_outage_only,500.0000,False,550.0000,BASE (no outage),Bus 2,high_voltage,1.0553,1.0486
 shared,8,any_new,0.0000,False,50.0000,Line 6-7,Bus 28,high_voltage,1.0504,1.0500
-shared,8,screening,200.0000,False,250.0000,Line 13-14,Line 4-5,overload,102.4655,80.4520
+shared,8,screening,200.0000,False,250.0000,Line 2-3,Bus 2,high_voltage,1.0768,1.0711
+shared,8,new_only,200.0000,False,250.0000,Line 13-14,Line 4-5,overload,102.4655,80.4520
 shared,8,no_outage_only,750.0000,False,800.0000,BASE (no outage),Bus 2,high_voltage,1.0551,1.0486
 shared,15,any_new,0.0000,False,50.0000,Line 14-15,Bus 28,high_voltage,1.0505,1.0500
-shared,15,screening,200.0000,False,250.0000,Line 16-17,Line 4-14,overload,102.9745,85.0374
-shared,15,no_outage_only,1000.0000,True,,,,,,
+shared,15,screening,0.0000,False,50.0000,Line 6-11,Line 4-14,overload,108.3403,105.9781
+shared,15,new_only,200.0000,False,250.0000,Line 16-17,Line 4-14,overload,102.9745,85.0374
+shared,15,no_outage_only,600.0000,False,650.0000,BASE (no outage),Bus 26,high_voltage,1.0577,1.0527
 shared,21,any_new,0.0000,False,50.0000,Line 1-39,Bus 29,high_voltage,1.0503,1.0500
-shared,21,screening,150.0000,False,200.0000,Line 16-17,Line 15-16,overload,104.1755,84.1370
+shared,21,screening,0.0000,False,50.0000,Line 23-24,Line 16-21,overload,117.9050,111.3206
+shared,21,new_only,150.0000,False,200.0000,Line 16-17,Line 15-16,overload,104.1755,84.1370
 shared,21,no_outage_only,400.0000,False,450.0000,BASE (no outage),Line 16-21,overload,105.0870,53.5339
 shared,27,any_new,0.0000,False,50.0000,Line 6-7,Bus 28,high_voltage,1.0507,1.0500
-shared,27,screening,150.0000,False,200.0000,Line 17-27,Bus 27,high_voltage,1.0553,1.0395
-shared,27,no_outage_only,1000.0000,True,,,,,,
-shared,28,any_new,0.0000,False,50.0000,Line 6-7,Bus 28,high_voltage,1.0505,1.0500
-shared,28,screening,0.0000,False,50.0000,Line 26-27,Line 2-25,overload,102.8870,95.6019
+shared,27,screening,50.0000,False,100.0000,Line 17-27,Bus 26,high_voltage,1.0597,1.0528
+shared,27,new_only,150.0000,False,200.0000,Line 17-27,Bus 27,high_voltage,1.0553,1.0395
+shared,27,no_outage_only,200.0000,False,250.0000,BASE (no outage),Bus 26,high_voltage,1.0580,1.0527
+shared,28,any_new,0.0000,False,50.0000,Line 26-27,Line 2-25,overload,102.8870,95.6019
+shared,28,screening,0.0000,False,50.0000,Line 26-27,Line 2-3,overload,111.0416,106.5101
+shared,28,new_only,0.0000,False,50.0000,Line 26-27,Line 2-25,overload,102.8870,95.6019
 shared,28,no_outage_only,750.0000,False,800.0000,BASE (no outage),Line 26-27,overload,103.3541,43.3352
 single,3,any_new,0.0000,False,50.0000,Line 16-17,Bus 29,high_voltage,1.0502,1.0500
-single,3,screening,250.0000,False,300.0000,Line 15-16,Line 3-4,overload,105.6859,63.3906
+single,3,screening,0.0000,False,50.0000,Line 10-13,Line 6-11,overload,112.8353,111.8117
+single,3,new_only,250.0000,False,300.0000,Line 15-16,Line 3-4,overload,105.6859,63.3906
 single,3,no_outage_only,500.0000,False,550.0000,BASE (no outage),Line 6-11,overload,100.4599,67.1502
 single,8,any_new,0.0000,False,50.0000,Line 1-39,Bus 29,high_voltage,1.0501,1.0500
-single,8,screening,550.0000,False,600.0000,Xfmr 25-37,Bus 30,high_voltage,1.0553,1.0499
+single,8,screening,150.0000,False,200.0000,Line 26-27,Line 2-3,overload,107.5169,106.5101
+single,8,new_only,550.0000,False,600.0000,Xfmr 25-37,Bus 30,high_voltage,1.0553,1.0499
 single,8,no_outage_only,650.0000,True,,,,,,
 single,15,any_new,0.0000,False,50.0000,Line 5-8,Bus 22,high_voltage,1.0502,1.0500
-single,15,screening,100.0000,False,150.0000,Line 10-11,Line 4-14,overload,102.8468,89.7248
+single,15,screening,0.0000,False,50.0000,Line 10-13,Line 6-11,overload,113.2763,111.8117
+single,15,new_only,100.0000,False,150.0000,Line 10-11,Line 4-14,overload,102.8468,89.7248
 single,15,no_outage_only,350.0000,False,400.0000,BASE (no outage),Line 6-11,overload,100.2087,67.1502
 single,21,any_new,0.0000,False,50.0000,Line 14-15,Bus 28,high_voltage,1.0501,1.0500
-single,21,screening,100.0000,False,150.0000,Line 16-17,Line 15-16,overload,107.8813,84.1370
+single,21,screening,0.0000,False,50.0000,Line 23-24,Line 16-21,overload,119.5110,111.3206
+single,21,new_only,100.0000,False,150.0000,Line 16-17,Line 15-16,overload,107.8813,84.1370
 single,21,no_outage_only,300.0000,False,350.0000,BASE (no outage),Line 16-21,overload,100.2054,53.5339
 single,27,any_new,0.0000,False,50.0000,Line 6-7,Bus 28,high_voltage,1.0505,1.0500
-single,27,screening,150.0000,False,200.0000,Line 1-2,Line 2-3,overload,100.6642,90.9242
-single,27,no_outage_only,450.0000,False,500.0000,BASE (no outage),Line 6-11,overload,100.4972,67.1502
-single,28,any_new,0.0000,False,50.0000,Line 4-14,Bus 28,high_voltage,1.0502,1.0499
-single,28,screening,0.0000,False,50.0000,Line 26-27,Line 2-25,overload,104.9259,95.6019
+single,27,screening,0.0000,False,50.0000,Line 10-13,Line 6-11,overload,112.9814,111.8117
+single,27,new_only,150.0000,False,200.0000,Line 1-2,Line 2-3,overload,100.6642,90.9242
+single,27,no_outage_only,400.0000,False,450.0000,BASE (no outage),Bus 25,high_voltage,1.0630,1.0579
+single,28,any_new,0.0000,False,50.0000,Line 26-27,Line 2-25,overload,104.9259,95.6019
+single,28,screening,0.0000,False,50.0000,Line 26-27,Line 2-3,overload,112.9301,106.5101
+single,28,new_only,0.0000,False,50.0000,Line 26-27,Line 2-25,overload,104.9259,95.6019
 single,28,no_outage_only,500.0000,False,550.0000,BASE (no outage),Line 6-11,overload,101.2646,67.1502

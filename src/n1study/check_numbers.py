@@ -17,7 +17,7 @@ NUM = re.compile(r"(?<![\w.])-?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?(?:e-?\d+)?")
 # Tens of thousands of raw values match almost any number by rounding, so documents
 # must quote the summary files instead.
 RAW_DUMPS = {"hosting_breaches.csv"}
-ALLOWED = {"1970", "2026", "3.12", "345", "15"}  # source year, memo date, Python version, nominal kV, run time
+ALLOWED = {"1970", "2026", "3.12", "345", "15", "1e-8"}  # source year, memo date, Python version, nominal kV, run time, solver tolerance
 
 
 def _walk(x, out):

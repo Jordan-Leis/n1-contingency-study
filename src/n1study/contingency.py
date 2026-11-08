@@ -130,6 +130,8 @@ def run_case(base_net, c, dispatch, qlims, slack_target_mw):
         gen_lost_mw=lost_gen, new_slack_bus=new_slack or "", reserve_shortfall_mw=shortfall,
         slack_mw=float(net.res_ext_grid.p_mw[net.ext_grid.in_service].sum()) if attempt else float("nan"),
         solved_vm_min_pu=vm_lo, solved_vm_max_pu=vm_hi,
+        # Q limits are enforced on PV machines only; the swing machine's vars are unlimited.
+        slack_q_mvar=float(net.res_ext_grid.q_mvar[net.ext_grid.in_service].sum()) if attempt else float("nan"),
     )
     return (net if status == "solved" else None), facts
 

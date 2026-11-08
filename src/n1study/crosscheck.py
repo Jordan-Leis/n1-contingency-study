@@ -149,6 +149,11 @@ def hand_checks():
         "pocket_gen_minus_load_mw": pocket_export, "line_23_24_rating_mva": rating,
         "hand_estimate_loading_pct": 100 * pocket_export / rating,
         "solved_line_23_24_p_mw": solved_p, "solved_loading_pct": float(net.res_line.loading_percent[i]),
+        "solved_q_mvar": float(net.res_line.q_from_mvar[i]),
+        "solved_mva": float(abs(complex(net.res_line.p_from_mw[i], net.res_line.q_from_mvar[i]))),
+        "solved_mva_pct_of_rating": float(100 * abs(complex(net.res_line.p_from_mw[i], net.res_line.q_from_mvar[i])) / rating),
+        "solved_current_ka": float(net.res_line.i_ka[i]), "rated_current_ka": float(net.line.max_i_ka[i]),
+        "end_vm_pu_max": float(max(net.res_bus.vm_pu[net.line.from_bus[i]], net.res_bus.vm_pu[net.line.to_bus[i]])),
     }
 
     # Xfmr 19-20 strands bus 20 (680 MW load) with bus 34 (Gen 34, 508 MW).

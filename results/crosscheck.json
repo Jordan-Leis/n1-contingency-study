@@ -22,7 +22,13 @@
       "line_23_24_rating_mva": 600.0,
       "hand_estimate_loading_pct": 160.4167,
       "solved_line_23_24_p_mw": 958.4827,
-      "solved_loading_pct": 157.7194
+      "solved_loading_pct": 157.7194,
+      "solved_q_mvar": 158.2038,
+      "solved_mva": 971.4513,
+      "solved_mva_pct_of_rating": 161.9085,
+      "solved_current_ka": 1.5836,
+      "rated_current_ka": 1.0041,
+      "end_vm_pu_max": 1.0274
     },
     "island_xfmr_19_20": {
       "hand_load_lost_mw": 680.0,

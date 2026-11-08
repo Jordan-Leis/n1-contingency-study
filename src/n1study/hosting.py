@@ -95,7 +95,9 @@ def keep_informative(rows):
 
 DEFINITIONS = {
     "any_new": "any limit crossing the same contingency did not show at 0 MW, however small",
-    "screening": "a new overload, a new voltage violation more than 0.005 pu past the band, or a solve that fails",
+    "screening": ("the N-1 study's own rule: a new overload, a new voltage violation more than 0.005 pu past the "
+                  "band, an existing violation made worse by more than 1 point or 0.005 pu, or a solve that fails"),
+    "new_only": "screening, but ignoring existing violations that solar makes worse (an optimistic upper bound)",
     "no_outage_only": "the screening rule applied to the no-outage case alone, ignoring N-1",
 }
 
@@ -104,12 +106,24 @@ def _fails(x, name):
     new = ~x.already_out_at_0mw.astype("boolean").fillna(False)
     solve_fail = x.kind.isin(SOLVE_FAIL)
     past = (x.value - C.V_MAX_PU).where(x.kind == "high_voltage", (C.V_MIN_PU - x.value))
-    screening = solve_fail | (new & ((x.kind == "overload") | (past > C.WORSENED_V_PU)))
+    new_only = solve_fail | (new & ((x.kind == "overload") | (past > C.WORSENED_V_PU)))
+    worse_by = (x.value - x.reference).where(x.kind != "low_voltage", x.reference - x.value)
+    margin = pd.Series(C.WORSENED_V_PU, index=x.index).where(x.kind != "overload", C.WORSENED_LOADING_PCT)
+    screening = new_only | (~new & (worse_by > margin))
     if name == "any_new":
         return solve_fail | new
+    if name == "new_only":
+        return new_only
     if name == "screening":
         return screening
     return screening & x.contingency.eq(BASE)
+
+
+def percent_past_limit(x):
+    """How far past its limit each row is, in percent of that limit, so overloads and voltages compare."""
+    v = 100 * (x.value - C.V_MAX_PU) / C.V_MAX_PU
+    v = v.where(x.kind == "high_voltage", 100 * (C.V_MIN_PU - x.value) / C.V_MIN_PU)
+    return (x.value - C.THERMAL_LIMIT_PCT).where(x.kind == "overload", v)
 
 
 def summarise(rows, steps):
@@ -131,8 +145,7 @@ def summarise(rows, steps):
             if not sf.empty:
                 r = sf.iloc[0]
             else:
-                sev = (at.value - C.THERMAL_LIMIT_PCT).where(at.kind == "overload",
-                                                             100 * (at.value - 1.0).abs())
+                sev = percent_past_limit(at)
                 r = at.loc[sev.idxmax()]
             out.append(dict(dispatch=d, bus=b, definition=name, hosting_mw=first - C.HOSTING_STEP_MW, capped=False,
                             limit_mw=first, limit_contingency=r.contingency, limit_element=r.element if isinstance(r.element, str) else "",
