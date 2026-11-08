@@ -54,7 +54,7 @@ Q limits barely move the totals on this case. The dispatch assumption moves them
 How to read the table:
 
 - **The literal answer is 0 MW at every bus.** N-1 already fails at 0 MW, so "before an N-1 violation appears" has nothing left to measure.
-- **Counting any new limit crossing gives under 50 MW at every bus.** Several buses sit at 1.0495 to 1.0500 pu, and the first 50 MW tips one of them over by a fraction of a thousandth of a pu.
+- **Counting any new limit crossing gives under 50 MW at every bus.** Several buses sit just under 1.05 pu at 0 MW, and the first 50 MW tips one of them over by less than a thousandth of a pu.
 - **The screening column is the number I'd quote.** A step fails on a new overload, a new voltage violation more than 0.005 pu past the band (the same margin the N-1 study uses for "worsened"), or a solve that fails.
 - **What's excluded.** Problems already there at 0 MW are not scored, even when solar makes them worse. A real interconnection study assigns those with distribution-factor thresholds, which I did not model.
 - **Resolution.** Each number is the last 50 MW step that passed, so the true limit lies between that number and the next step.
@@ -69,7 +69,7 @@ make reproduce   # about 15 minutes on one core: study, figures, memo, tests, nu
 make quick       # about a minute: everything except the hosting sweep (reuses its committed results)
 ```
 
-Needs [uv](https://docs.astral.sh/uv/) and Python 3.12. Dependencies are pinned in `uv.lock`. Every number in this README and the memo is read from `results/`, and `make check` fails if the README quotes a number that no results file contains.
+Needs [uv](https://docs.astral.sh/uv/) and Python 3.12. Dependencies are pinned in `uv.lock`. Every number in this README and the memo is read from `results/`, and `make check` fails if the README or memo quotes a number that does not match a value in the summary results files at the precision quoted. It accepts small integers such as bus numbers and counts, so it is a guard against typos and stale numbers, not a full audit.
 
 | Output | What it is |
 |---|---|
@@ -101,7 +101,7 @@ All three are in [`results/crosscheck.json`](results/crosscheck.json) and rebuil
    - **Lost load.** Losing Xfmr 19-20 should lose 680 MW of load and 508 MW of generation, and the study reports exactly that.
    - **Slack pick-up.** Losing Gen 38 (830 MW) under swing-only pick-up raises the swing machine by 845.9 MW. The extra 15.9 MW is the rise in losses.
 
-There are also 18 tests (`make test`) covering power balance, island handling, slack moves, the dispatch models and violation categories.
+There are also 19 tests (`make test`) covering power balance, island handling, slack moves, the dispatch models and violation categories.
 
 ## Limitations
 

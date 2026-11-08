@@ -14,6 +14,9 @@ from pathlib import Path
 from . import config as C
 
 NUM = re.compile(r"(?<![\w.])-?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?(?:e-?\d+)?")
+# Tens of thousands of raw values match almost any number by rounding, so documents
+# must quote the summary files instead.
+RAW_DUMPS = {"hosting_breaches.csv"}
 ALLOWED = {"1970", "2026", "3.12", "345", "15"}  # source year, memo date, Python version, nominal kV, run time
 
 
@@ -36,6 +39,8 @@ def _walk(x, out):
 def sourced():
     vals = set()
     for f in sorted(C.RESULTS.iterdir()):
+        if f.name in RAW_DUMPS:
+            continue
         if f.suffix == ".json":
             _walk(json.loads(f.read_text()), vals)
         elif f.suffix == ".csv":
