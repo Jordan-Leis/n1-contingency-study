@@ -1,225 +1,225 @@
-scenario,rank,label,kind,status,solver,islanded_buses,load_lost_mw,gen_lost_mw,new_slack_bus,reserve_shortfall_mw,slack_mw,overloads,worst_overload_element,worst_overload_pct,low_voltage_buses,lowest_bus,lowest_vm_pu,high_voltage_buses,highest_bus,highest_vm_pu,preexisting_only
-shared_qlim,1,Gen 39,gen,no_solution,,,0.0000,1000.0000,,36.9411,,0,,,0,,,0,,,0
-shared_qlim,2,Line 16-19,line,solved,warm-start NR,19 20 33 34,680.0000,1140.0000,,0.0000,677.8490,1,Line 2-3,109.4652,0,,,0,,,2
-shared_qlim,3,Xfmr 19-20,trafo,solved,warm-start NR,20 34,680.0000,508.0000,,0.0000,677.7892,0,,,0,,,0,,,6
-shared_qlim,4,Xfmr 6-31,trafo,solved,warm-start NR,31,9.2000,677.8575,39,0.0000,1000.1901,2,Line 2-3,132.5758,0,,,0,,,1
-shared_qlim,5,Line 21-22,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,697.3015,3,Line 23-24,157.7194,0,,,0,,,2
-shared_qlim,6,Gen 32,gen,solved,warm-start NR,,0.0000,650.0000,,0.0000,677.9762,1,Line 2-3,134.2709,1,Bus 32,0.9242,0,,,1
-shared_qlim,7,Xfmr 10-32,trafo,solved,warm-start NR,32,0.0000,650.0000,,0.0000,677.9762,1,Line 2-3,134.2709,0,,,0,,,1
-shared_qlim,8,Gen 31,slack_gen,solved,warm-start NR,,0.0000,677.8575,39,0.0000,1000.2002,2,Line 2-3,133.6498,1,Bus 31,0.9143,0,,,1
-shared_qlim,9,Line 13-14,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,681.6354,2,Line 6-11,132.5080,0,,,0,,,3
-shared_qlim,10,Xfmr 22-35,trafo,solved,warm-start NR,35,0.0000,650.0000,,0.0000,677.8348,1,Line 2-3,129.8568,0,,,0,,,1
-shared_qlim,11,Gen 35,gen,solved,warm-start NR,,0.0000,650.0000,,0.0000,677.8348,1,Line 2-3,129.8568,0,,,0,,,1
-shared_qlim,12,Xfmr 19-33,trafo,solved,warm-start NR,33,0.0000,632.0000,,0.0000,677.8386,1,Line 2-3,127.0402,0,,,0,,,1
-shared_qlim,13,Gen 33,gen,solved,warm-start NR,,0.0000,632.0000,,0.0000,677.8386,1,Line 2-3,127.0402,0,,,0,,,1
-shared_qlim,14,Gen 36,gen,solved,warm-start NR,,0.0000,560.0000,,0.0000,677.8414,1,Line 2-3,118.7213,0,,,0,,,1
-shared_qlim,15,Line 23-36,line,solved,warm-start NR,36,0.0000,560.0000,,0.0000,677.8414,1,Line 2-3,118.7213,0,,,0,,,1
-shared_qlim,16,Gen 34,gen,solved,warm-start NR,,0.0000,508.0000,,0.0000,677.8453,1,Line 2-3,113.7036,2,Bus 34,0.9350,0,,,2
-shared_qlim,17,Xfmr 20-34,trafo,solved,warm-start NR,34,0.0000,508.0000,,0.0000,677.8453,1,Line 2-3,113.7036,1,Bus 20,0.9434,0,,,2
-shared_qlim,18,Line 10-13,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.5612,2,Line 6-11,111.8117,0,,,0,,,3
-shared_qlim,19,Line 23-24,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,683.3991,2,Line 16-21,111.3206,0,,,0,,,2
-shared_qlim,20,Line 16-21,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,683.4814,1,Line 23-24,110.3878,0,,,0,,,2
-shared_qlim,21,Line 10-11,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,681.1534,1,Line 10-13,107.3625,0,,,0,,,3
-shared_qlim,22,Line 26-27,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,693.4868,1,Line 2-3,106.5101,0,,,4,Bus 26,1.0773,1
-shared_qlim,23,Line 6-11,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.5622,3,Line 4-14,105.9781,0,,,0,,,3
-shared_qlim,24,Gen 38,gen,solved,warm-start NR,,0.0000,830.0000,,0.0000,677.8121,1,Line 2-3,103.7027,0,,,0,,,1
-shared_qlim,25,Xfmr 29-38,trafo,solved,warm-start NR,38,0.0000,830.0000,,0.0000,677.8121,1,Line 2-3,103.7027,0,,,0,,,1
-shared_qlim,26,Line 4-14,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.6633,1,Line 6-11,103.3289,0,,,0,,,5
-shared_qlim,27,Line 16-24,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.2805,0,,,0,,,2,Bus 24,1.0797,3
-shared_qlim,28,Line 2-3,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,681.6082,0,,,0,,,3,Bus 2,1.0711,1
-shared_qlim,29,Line 3-4,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.2288,0,,,0,,,5,Bus 25,1.0703,5
-shared_qlim,30,Line 15-16,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,685.2005,0,,,1,Bus 15,0.9369,0,,,7
-shared_qlim,31,Line 8-9,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.8866,0,,,0,,,1,Bus 9,1.0615,3
-shared_qlim,32,Line 2-25,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,679.9648,0,,,0,,,2,Bus 2,1.0561,1
-shared_qlim,33,Gen 37,gen,solved,warm-start NR,,0.0000,540.0000,,0.0000,677.8277,0,,,0,,,1,Bus 2,1.0540,1
-shared_qlim,34,Xfmr 25-37,trafo,solved,warm-start NR,37,0.0000,540.0000,,0.0000,677.8277,0,,,0,,,1,Bus 2,1.0540,1
-shared_qlim,35,Gen 30,gen,solved,warm-start NR,,0.0000,250.0000,,0.0000,677.8857,0,,,0,,,0,,,1
-shared_qlim,36,Line 1-2,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.2338,0,,,0,,,0,,,3
-shared_qlim,37,Line 1-39,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.1023,0,,,0,,,0,,,6
-shared_qlim,38,Line 14-15,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.8524,0,,,0,,,0,,,3
-shared_qlim,39,Line 16-17,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.0206,0,,,0,,,0,,,4
-shared_qlim,40,Line 17-18,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.5957,0,,,0,,,0,,,7
-shared_qlim,41,Line 17-27,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.3249,0,,,0,,,0,,,5
-shared_qlim,42,Line 22-23,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.9825,0,,,0,,,0,,,6
-shared_qlim,43,Line 25-26,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.3966,0,,,0,,,0,,,2
-shared_qlim,44,Line 26-28,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.3492,0,,,0,,,0,,,2
-shared_qlim,45,Line 26-29,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.2965,0,,,0,,,0,,,2
-shared_qlim,46,Line 28-29,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,691.4188,0,,,0,,,0,,,2
-shared_qlim,47,Line 3-18,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.4992,0,,,0,,,0,,,5
-shared_qlim,48,Line 4-5,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,679.3236,0,,,0,,,0,,,3
-shared_qlim,49,Line 5-6,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.4072,0,,,0,,,0,,,3
-shared_qlim,50,Line 5-8,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.3882,0,,,0,,,0,,,5
-shared_qlim,51,Line 6-7,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.8394,0,,,0,,,0,,,3
-shared_qlim,52,Line 7-8,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,679.0688,0,,,0,,,0,,,5
-shared_qlim,53,Line 9-39,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.1112,0,,,0,,,0,,,4
-shared_qlim,54,Xfmr 11-12,trafo,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.9509,0,,,0,,,0,,,7
-shared_qlim,55,Xfmr 12-13,trafo,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.9423,0,,,0,,,0,,,7
-shared_qlim,56,Xfmr 2-30,trafo,solved,warm-start NR,30,0.0000,250.0000,,0.0000,677.8857,0,,,0,,,0,,,1
-shared_noqlim,1,Gen 39,gen,no_solution,,,0.0000,1000.0000,,0.0000,,0,,,0,,,0,,,0
-shared_noqlim,2,Line 16-19,line,solved,warm-start NR,19 20 33 34,680.0000,1140.0000,,0.0000,677.8626,1,Line 2-3,109.4639,0,,,0,,,2
-shared_noqlim,3,Xfmr 19-20,trafo,solved,warm-start NR,20 34,680.0000,508.0000,,0.0000,677.8031,0,,,0,,,0,,,6
-shared_noqlim,4,Xfmr 6-31,trafo,solved,warm-start NR,31,9.2000,677.8711,39,0.0000,1000.1897,2,Line 2-3,132.5322,0,,,0,,,1
-shared_noqlim,5,Line 21-22,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,697.2035,3,Line 23-24,157.5361,0,,,0,,,2
-shared_noqlim,6,Xfmr 10-32,trafo,solved,warm-start NR,32,0.0000,650.0000,,0.0000,677.9896,1,Line 2-3,134.2233,0,,,0,,,1
-shared_noqlim,7,Gen 32,gen,solved,warm-start NR,,0.0000,650.0000,,0.0000,677.9896,1,Line 2-3,134.2233,1,Bus 32,0.9244,0,,,1
-shared_noqlim,8,Gen 31,slack_gen,solved,warm-start NR,,0.0000,677.8711,39,0.0000,1000.1925,2,Line 2-3,133.5482,1,Bus 31,0.9150,0,,,1
-shared_noqlim,9,Line 13-14,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,681.6332,2,Line 6-11,132.5051,0,,,0,,,3
-shared_noqlim,10,Xfmr 22-35,trafo,solved,warm-start NR,35,0.0000,650.0000,,0.0000,677.8486,1,Line 2-3,129.8023,0,,,0,,,1
-shared_noqlim,11,Gen 35,gen,solved,warm-start NR,,0.0000,650.0000,,0.0000,677.8486,1,Line 2-3,129.8023,0,,,0,,,1
-shared_noqlim,12,Xfmr 19-33,trafo,solved,warm-start NR,33,0.0000,632.0000,,0.0000,677.8526,1,Line 2-3,126.5609,0,,,0,,,2
-shared_noqlim,13,Gen 33,gen,solved,warm-start NR,,0.0000,632.0000,,0.0000,677.8526,1,Line 2-3,126.5609,0,,,0,,,2
-shared_noqlim,14,Line 23-36,line,solved,warm-start NR,36,0.0000,560.0000,,0.0000,677.8551,1,Line 2-3,118.7154,0,,,0,,,1
-shared_noqlim,15,Gen 36,gen,solved,warm-start NR,,0.0000,560.0000,,0.0000,677.8551,1,Line 2-3,118.7154,0,,,0,,,1
-shared_noqlim,16,Xfmr 20-34,trafo,solved,warm-start NR,34,0.0000,508.0000,,0.0000,677.8594,1,Line 2-3,113.6559,1,Bus 20,0.9447,0,,,2
-shared_noqlim,17,Gen 34,gen,solved,warm-start NR,,0.0000,508.0000,,0.0000,677.8594,1,Line 2-3,113.6559,2,Bus 34,0.9363,0,,,2
-shared_noqlim,18,Line 10-13,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.5587,2,Line 6-11,111.8080,0,,,0,,,3
-shared_noqlim,19,Line 23-24,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,683.3866,2,Line 16-21,111.3016,0,,,0,,,2
-shared_noqlim,20,Line 16-21,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,683.4703,1,Line 23-24,110.3678,0,,,0,,,2
-shared_noqlim,21,Line 10-11,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,681.1523,1,Line 10-13,107.3595,0,,,0,,,3
-shared_noqlim,22,Line 26-27,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,693.9968,1,Line 2-3,106.2692,0,,,4,Bus 26,1.0740,1
-shared_noqlim,23,Line 6-11,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.5604,3,Line 4-14,105.9754,0,,,0,,,3
-shared_noqlim,24,Xfmr 29-38,trafo,solved,warm-start NR,38,0.0000,830.0000,,0.0000,677.8291,1,Line 2-3,103.6414,0,,,0,,,1
-shared_noqlim,25,Gen 38,gen,solved,warm-start NR,,0.0000,830.0000,,0.0000,677.8291,1,Line 2-3,103.6414,0,,,0,,,1
-shared_noqlim,26,Line 4-14,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.6633,1,Line 6-11,103.3289,0,,,0,,,5
-shared_noqlim,27,Line 16-24,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.2711,0,,,0,,,2,Bus 24,1.0798,3
-shared_noqlim,28,Line 15-16,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,685.2081,0,,,1,Bus 15,0.9369,0,,,7
-shared_noqlim,29,Line 8-9,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.8840,0,,,0,,,1,Bus 9,1.0615,3
-shared_noqlim,30,Line 2-3,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,681.3540,0,,,0,,,1,Bus 2,1.0600,2
-shared_noqlim,31,Line 3-4,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.4111,0,,,0,,,1,Bus 2,1.0548,7
-shared_noqlim,32,Line 2-25,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,679.9514,0,,,0,,,1,Bus 2,1.0541,1
-shared_noqlim,33,Xfmr 25-37,trafo,solved,warm-start NR,37,0.0000,540.0000,,0.0000,677.8414,0,,,0,,,1,Bus 2,1.0540,1
-shared_noqlim,34,Gen 37,gen,solved,warm-start NR,,0.0000,540.0000,,0.0000,677.8414,0,,,0,,,1,Bus 2,1.0540,1
-shared_noqlim,35,Gen 30,gen,solved,warm-start NR,,0.0000,250.0000,,0.0000,677.8993,0,,,0,,,0,,,1
-shared_noqlim,36,Line 1-2,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.2327,0,,,0,,,0,,,3
-shared_noqlim,37,Line 1-39,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.1050,0,,,0,,,0,,,6
-shared_noqlim,38,Line 14-15,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.8520,0,,,0,,,0,,,3
-shared_noqlim,39,Line 16-17,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.0146,0,,,0,,,0,,,4
-shared_noqlim,40,Line 17-18,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.6362,0,,,0,,,0,,,7
-shared_noqlim,41,Line 17-27,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.3232,0,,,0,,,0,,,5
-shared_noqlim,42,Line 22-23,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.9880,0,,,0,,,0,,,5
-shared_noqlim,43,Line 25-26,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.4055,0,,,0,,,0,,,2
-shared_noqlim,44,Line 26-28,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.3471,0,,,0,,,0,,,2
-shared_noqlim,45,Line 26-29,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.2936,0,,,0,,,0,,,2
-shared_noqlim,46,Line 28-29,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,691.4141,0,,,0,,,0,,,2
-shared_noqlim,47,Line 3-18,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.4989,0,,,0,,,0,,,5
-shared_noqlim,48,Line 4-5,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,679.3220,0,,,0,,,0,,,3
-shared_noqlim,49,Line 5-6,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.4048,0,,,0,,,0,,,3
-shared_noqlim,50,Line 5-8,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.3967,0,,,0,,,0,,,5
-shared_noqlim,51,Line 6-7,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.8384,0,,,0,,,0,,,4
-shared_noqlim,52,Line 7-8,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,679.0754,0,,,0,,,0,,,5
-shared_noqlim,53,Line 9-39,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.1126,0,,,0,,,0,,,4
-shared_noqlim,54,Xfmr 11-12,trafo,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.9613,0,,,0,,,0,,,6
-shared_noqlim,55,Xfmr 12-13,trafo,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.9575,0,,,0,,,0,,,7
-shared_noqlim,56,Xfmr 2-30,trafo,solved,warm-start NR,30,0.0000,250.0000,,0.0000,677.8993,0,,,0,,,0,,,1
-single_qlim,1,Gen 39,gen,implausible_solution,dc-start Iwamoto NR,,0.0000,1000.0000,,0.0000,1715.7986,0,,,0,,,0,,,0
-single_qlim,2,Xfmr 19-20,trafo,solved,warm-start NR,20 34,680.0000,508.0000,,0.0000,507.3668,1,Line 16-19,100.9181,0,,,0,,,4
-single_qlim,3,Line 16-19,line,solved,warm-start NR,19 20 33 34,680.0000,1140.0000,,0.0000,1132.4084,0,,,0,,,0,,,2
-single_qlim,4,Xfmr 6-31,trafo,solved,warm-start NR,31,9.2000,677.8575,39,0.0000,1672.8321,1,Line 2-3,107.2111,0,,,0,,,2
-single_qlim,5,Line 21-22,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,697.3015,3,Line 23-24,157.7194,0,,,0,,,2
-single_qlim,6,Line 13-14,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,681.6354,2,Line 6-11,132.5080,0,,,0,,,3
-single_qlim,7,Line 10-13,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.5612,2,Line 6-11,111.8117,0,,,0,,,3
-single_qlim,8,Line 23-24,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,683.3991,2,Line 16-21,111.3206,0,,,0,,,2
-single_qlim,9,Line 16-21,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,683.4814,1,Line 23-24,110.3878,0,,,0,,,2
-single_qlim,10,Gen 38,gen,solved,warm-start NR,,0.0000,830.0000,,0.0000,1523.8040,2,Line 4-5,108.3895,0,,,0,,,1
-single_qlim,11,Xfmr 29-38,trafo,solved,warm-start NR,38,0.0000,830.0000,,0.0000,1523.8040,2,Line 4-5,108.3895,0,,,0,,,1
-single_qlim,12,Gen 31,slack_gen,solved,warm-start NR,,0.0000,677.8575,39,0.0000,1682.2919,1,Line 2-3,107.8860,1,Bus 31,0.9186,0,,,2
-single_qlim,13,Line 10-11,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,681.1534,1,Line 10-13,107.3625,0,,,0,,,3
-single_qlim,14,Line 26-27,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,693.4868,1,Line 2-3,106.5101,0,,,4,Bus 26,1.0773,1
-single_qlim,15,Line 6-11,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.5622,3,Line 4-14,105.9781,0,,,0,,,3
-single_qlim,16,Line 4-14,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.6633,1,Line 6-11,103.3289,0,,,0,,,5
-single_qlim,17,Gen 32,gen,solved,warm-start NR,,0.0000,650.0000,,0.0000,1328.5065,0,,,1,Bus 32,0.9075,0,,,2
-single_qlim,18,Line 16-24,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.2805,0,,,0,,,2,Bus 24,1.0797,3
-single_qlim,19,Line 2-3,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,681.6082,0,,,0,,,3,Bus 2,1.0711,1
-single_qlim,20,Line 3-4,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.2288,0,,,0,,,5,Bus 25,1.0703,5
-single_qlim,21,Gen 34,gen,solved,warm-start NR,,0.0000,508.0000,,0.0000,1188.4343,0,,,2,Bus 34,0.9316,0,,,2
-single_qlim,22,Line 15-16,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,685.2005,0,,,1,Bus 15,0.9369,0,,,7
-single_qlim,23,Line 8-9,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.8866,0,,,0,,,1,Bus 9,1.0615,3
-single_qlim,24,Xfmr 20-34,trafo,solved,warm-start NR,34,0.0000,508.0000,,0.0000,1188.4343,0,,,1,Bus 20,0.9400,0,,,2
-single_qlim,25,Line 2-25,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,679.9648,0,,,0,,,2,Bus 2,1.0561,1
-single_qlim,26,Gen 37,gen,solved,warm-start NR,,0.0000,540.0000,,0.0000,1218.2931,0,,,0,,,1,Bus 2,1.0512,1
-single_qlim,27,Xfmr 25-37,trafo,solved,warm-start NR,37,0.0000,540.0000,,0.0000,1218.2931,0,,,0,,,1,Bus 2,1.0512,1
-single_qlim,28,Gen 33,gen,solved,warm-start NR,,0.0000,632.0000,,0.0000,1311.7484,0,,,1,Bus 33,0.9490,0,,,2
-single_qlim,29,Gen 30,gen,solved,warm-start NR,,0.0000,250.0000,,0.0000,929.7945,0,,,0,,,0,,,1
-single_qlim,30,Gen 35,gen,solved,warm-start NR,,0.0000,650.0000,,0.0000,1330.5378,0,,,0,,,0,,,2
-single_qlim,31,Gen 36,gen,solved,warm-start NR,,0.0000,560.0000,,0.0000,1237.0863,0,,,0,,,0,,,1
-single_qlim,32,Line 1-2,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.2338,0,,,0,,,0,,,3
-single_qlim,33,Line 1-39,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.1023,0,,,0,,,0,,,6
-single_qlim,34,Line 14-15,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.8524,0,,,0,,,0,,,3
-single_qlim,35,Line 16-17,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.0206,0,,,0,,,0,,,4
-single_qlim,36,Line 17-18,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.5957,0,,,0,,,0,,,7
-single_qlim,37,Line 17-27,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.3249,0,,,0,,,0,,,5
-single_qlim,38,Line 22-23,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.9825,0,,,0,,,0,,,6
-single_qlim,39,Line 23-36,line,solved,warm-start NR,36,0.0000,560.0000,,0.0000,1237.0863,0,,,0,,,0,,,1
-single_qlim,40,Line 25-26,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.3966,0,,,0,,,0,,,2
-single_qlim,41,Line 26-28,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.3492,0,,,0,,,0,,,2
-single_qlim,42,Line 26-29,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.2965,0,,,0,,,0,,,2
-single_qlim,43,Line 28-29,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,691.4188,0,,,0,,,0,,,2
-single_qlim,44,Line 3-18,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.4992,0,,,0,,,0,,,5
-single_qlim,45,Line 4-5,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,679.3236,0,,,0,,,0,,,3
-single_qlim,46,Line 5-6,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.4072,0,,,0,,,0,,,3
-single_qlim,47,Line 5-8,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.3882,0,,,0,,,0,,,5
-single_qlim,48,Line 6-7,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.8394,0,,,0,,,0,,,3
-single_qlim,49,Line 7-8,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,679.0688,0,,,0,,,0,,,5
-single_qlim,50,Line 9-39,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.1112,0,,,0,,,0,,,4
-single_qlim,51,Xfmr 10-32,trafo,solved,warm-start NR,32,0.0000,650.0000,,0.0000,1328.5065,0,,,0,,,0,,,2
-single_qlim,52,Xfmr 11-12,trafo,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.9509,0,,,0,,,0,,,7
-single_qlim,53,Xfmr 12-13,trafo,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.9423,0,,,0,,,0,,,7
-single_qlim,54,Xfmr 19-33,trafo,solved,warm-start NR,33,0.0000,632.0000,,0.0000,1311.7484,0,,,0,,,0,,,2
-single_qlim,55,Xfmr 2-30,trafo,solved,warm-start NR,30,0.0000,250.0000,,0.0000,929.7945,0,,,0,,,0,,,1
-single_qlim,56,Xfmr 22-35,trafo,solved,warm-start NR,35,0.0000,650.0000,,0.0000,1330.5378,0,,,0,,,0,,,2
-single_noqlim,1,Gen 39,gen,no_solution,,,0.0000,1000.0000,,0.0000,,0,,,0,,,0,,,0
-single_noqlim,2,Xfmr 19-20,trafo,solved,warm-start NR,20 34,680.0000,508.0000,,0.0000,507.3790,1,Line 16-19,100.9218,0,,,0,,,4
-single_noqlim,3,Line 16-19,line,solved,warm-start NR,19 20 33 34,680.0000,1140.0000,,0.0000,1132.4084,0,,,0,,,0,,,2
-single_noqlim,4,Xfmr 6-31,trafo,solved,warm-start NR,31,9.2000,677.8711,39,0.0000,1672.8264,1,Line 2-3,107.1845,0,,,0,,,2
-single_noqlim,5,Line 21-22,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,697.2035,3,Line 23-24,157.5361,0,,,0,,,2
-single_noqlim,6,Line 13-14,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,681.6332,2,Line 6-11,132.5051,0,,,0,,,3
-single_noqlim,7,Line 10-13,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.5587,2,Line 6-11,111.8080,0,,,0,,,3
-single_noqlim,8,Line 23-24,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,683.3866,2,Line 16-21,111.3016,0,,,0,,,2
-single_noqlim,9,Line 16-21,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,683.4703,1,Line 23-24,110.3678,0,,,0,,,2
-single_noqlim,10,Gen 31,slack_gen,solved,warm-start NR,,0.0000,677.8711,39,0.0000,1682.2859,1,Line 2-3,107.8580,1,Bus 31,0.9187,0,,,2
-single_noqlim,11,Xfmr 29-38,trafo,solved,warm-start NR,38,0.0000,830.0000,,0.0000,1523.2800,2,Line 4-5,107.7830,0,,,0,,,1
-single_noqlim,12,Gen 38,gen,solved,warm-start NR,,0.0000,830.0000,,0.0000,1523.2800,2,Line 4-5,107.7830,0,,,0,,,1
-single_noqlim,13,Line 10-11,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,681.1523,1,Line 10-13,107.3595,0,,,0,,,3
-single_noqlim,14,Line 26-27,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,693.9968,1,Line 2-3,106.2692,0,,,4,Bus 26,1.0740,1
-single_noqlim,15,Line 6-11,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.5604,3,Line 4-14,105.9754,0,,,0,,,3
-single_noqlim,16,Line 4-14,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.6633,1,Line 6-11,103.3289,0,,,0,,,5
-single_noqlim,17,Gen 32,gen,solved,warm-start NR,,0.0000,650.0000,,0.0000,1328.4948,0,,,1,Bus 32,0.9078,0,,,2
-single_noqlim,18,Line 16-24,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.2711,0,,,0,,,2,Bus 24,1.0798,3
-single_noqlim,19,Gen 34,gen,solved,warm-start NR,,0.0000,508.0000,,0.0000,1188.3825,0,,,2,Bus 34,0.9351,0,,,2
-single_noqlim,20,Line 15-16,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,685.2081,0,,,1,Bus 15,0.9369,0,,,7
-single_noqlim,21,Line 8-9,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.8840,0,,,0,,,1,Bus 9,1.0615,3
-single_noqlim,22,Line 2-3,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,681.3540,0,,,0,,,1,Bus 2,1.0600,2
-single_noqlim,23,Xfmr 20-34,trafo,solved,warm-start NR,34,0.0000,508.0000,,0.0000,1188.3825,0,,,1,Bus 20,0.9435,0,,,2
-single_noqlim,24,Line 3-4,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.4111,0,,,0,,,1,Bus 2,1.0548,7
-single_noqlim,25,Line 2-25,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,679.9514,0,,,0,,,1,Bus 2,1.0541,1
-single_noqlim,26,Gen 37,gen,solved,warm-start NR,,0.0000,540.0000,,0.0000,1218.2882,0,,,0,,,1,Bus 2,1.0512,1
-single_noqlim,27,Xfmr 25-37,trafo,solved,warm-start NR,37,0.0000,540.0000,,0.0000,1218.2882,0,,,0,,,1,Bus 2,1.0512,1
-single_noqlim,28,Gen 30,gen,solved,warm-start NR,,0.0000,250.0000,,0.0000,929.7891,0,,,0,,,0,,,1
-single_noqlim,29,Gen 33,gen,solved,warm-start NR,,0.0000,632.0000,,0.0000,1311.6380,0,,,0,,,0,,,2
-single_noqlim,30,Gen 35,gen,solved,warm-start NR,,0.0000,650.0000,,0.0000,1330.5233,0,,,0,,,0,,,2
-single_noqlim,31,Gen 36,gen,solved,warm-start NR,,0.0000,560.0000,,0.0000,1237.0840,0,,,0,,,0,,,1
-single_noqlim,32,Line 1-2,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.2327,0,,,0,,,0,,,3
-single_noqlim,33,Line 1-39,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.1050,0,,,0,,,0,,,6
-single_noqlim,34,Line 14-15,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.8520,0,,,0,,,0,,,3
-single_noqlim,35,Line 16-17,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.0146,0,,,0,,,0,,,4
-single_noqlim,36,Line 17-18,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.6362,0,,,0,,,0,,,7
-single_noqlim,37,Line 17-27,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.3232,0,,,0,,,0,,,5
-single_noqlim,38,Line 22-23,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.9880,0,,,0,,,0,,,5
-single_noqlim,39,Line 23-36,line,solved,warm-start NR,36,0.0000,560.0000,,0.0000,1237.0840,0,,,0,,,0,,,1
-single_noqlim,40,Line 25-26,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.4055,0,,,0,,,0,,,2
-single_noqlim,41,Line 26-28,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.3471,0,,,0,,,0,,,2
-single_noqlim,42,Line 26-29,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.2936,0,,,0,,,0,,,2
-single_noqlim,43,Line 28-29,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,691.4141,0,,,0,,,0,,,2
-single_noqlim,44,Line 3-18,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.4989,0,,,0,,,0,,,5
-single_noqlim,45,Line 4-5,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,679.3220,0,,,0,,,0,,,3
-single_noqlim,46,Line 5-6,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.4048,0,,,0,,,0,,,3
-single_noqlim,47,Line 5-8,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.3967,0,,,0,,,0,,,5
-single_noqlim,48,Line 6-7,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.8384,0,,,0,,,0,,,4
-single_noqlim,49,Line 7-8,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,679.0754,0,,,0,,,0,,,5
-single_noqlim,50,Line 9-39,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.1126,0,,,0,,,0,,,4
-single_noqlim,51,Xfmr 10-32,trafo,solved,warm-start NR,32,0.0000,650.0000,,0.0000,1328.4948,0,,,0,,,0,,,2
-single_noqlim,52,Xfmr 11-12,trafo,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.9613,0,,,0,,,0,,,6
-single_noqlim,53,Xfmr 12-13,trafo,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.9575,0,,,0,,,0,,,7
-single_noqlim,54,Xfmr 19-33,trafo,solved,warm-start NR,33,0.0000,632.0000,,0.0000,1311.6380,0,,,0,,,0,,,2
-single_noqlim,55,Xfmr 2-30,trafo,solved,warm-start NR,30,0.0000,250.0000,,0.0000,929.7891,0,,,0,,,0,,,1
-single_noqlim,56,Xfmr 22-35,trafo,solved,warm-start NR,35,0.0000,650.0000,,0.0000,1330.5233,0,,,0,,,0,,,2
+scenario,rank,label,kind,status,solver,islanded_buses,load_lost_mw,gen_lost_mw,new_slack_bus,reserve_shortfall_mw,slack_mw,solved_vm_min_pu,solved_vm_max_pu,overloads,worst_overload_element,worst_overload_pct,low_voltage_buses,lowest_bus,lowest_vm_pu,high_voltage_buses,highest_bus,highest_vm_pu,preexisting_only
+shared_qlim,1,Gen 39,gen,no_solution,,,0.0000,1000.0000,,36.9411,,,,0,,,0,,,0,,,0
+shared_qlim,2,Line 16-19,line,solved,warm-start NR,19 20 33 34,680.0000,1140.0000,,0.0000,677.8490,0.9820,1.0636,1,Line 2-3,109.4652,0,,,0,,,2
+shared_qlim,3,Xfmr 19-20,trafo,solved,warm-start NR,20 34,680.0000,508.0000,,0.0000,677.7892,0.9820,1.0636,0,,,0,,,0,,,6
+shared_qlim,4,Xfmr 6-31,trafo,solved,warm-start NR,31,9.2000,677.8575,39,0.0000,1000.1901,0.9735,1.0636,2,Line 2-3,132.5758,0,,,0,,,1
+shared_qlim,5,Line 21-22,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,697.3015,0.9768,1.0636,3,Line 23-24,157.7194,0,,,0,,,2
+shared_qlim,6,Gen 32,gen,solved,warm-start NR,,0.0000,650.0000,,0.0000,677.9762,0.9242,1.0636,1,Line 2-3,134.2709,1,Bus 32,0.9242,0,,,1
+shared_qlim,7,Xfmr 10-32,trafo,solved,warm-start NR,32,0.0000,650.0000,,0.0000,677.9762,0.9747,1.0636,1,Line 2-3,134.2709,0,,,0,,,1
+shared_qlim,8,Gen 31,slack_gen,solved,warm-start NR,,0.0000,677.8575,39,0.0000,1000.2002,0.9143,1.0636,2,Line 2-3,133.6498,1,Bus 31,0.9143,0,,,1
+shared_qlim,9,Line 13-14,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,681.6354,0.9820,1.0636,2,Line 6-11,132.5080,0,,,0,,,3
+shared_qlim,10,Xfmr 22-35,trafo,solved,warm-start NR,35,0.0000,650.0000,,0.0000,677.8348,0.9820,1.0636,1,Line 2-3,129.8568,0,,,0,,,1
+shared_qlim,11,Gen 35,gen,solved,warm-start NR,,0.0000,650.0000,,0.0000,677.8348,0.9820,1.0636,1,Line 2-3,129.8568,0,,,0,,,1
+shared_qlim,12,Xfmr 19-33,trafo,solved,warm-start NR,33,0.0000,632.0000,,0.0000,677.8386,0.9628,1.0636,1,Line 2-3,127.0402,0,,,0,,,1
+shared_qlim,13,Gen 33,gen,solved,warm-start NR,,0.0000,632.0000,,0.0000,677.8386,0.9539,1.0636,1,Line 2-3,127.0402,0,,,0,,,1
+shared_qlim,14,Gen 36,gen,solved,warm-start NR,,0.0000,560.0000,,0.0000,677.8414,0.9820,1.0522,1,Line 2-3,118.7213,0,,,0,,,1
+shared_qlim,15,Line 23-36,line,solved,warm-start NR,36,0.0000,560.0000,,0.0000,677.8414,0.9820,1.0522,1,Line 2-3,118.7213,0,,,0,,,1
+shared_qlim,16,Gen 34,gen,solved,warm-start NR,,0.0000,508.0000,,0.0000,677.8453,0.9350,1.0636,1,Line 2-3,113.7036,2,Bus 34,0.9350,0,,,2
+shared_qlim,17,Xfmr 20-34,trafo,solved,warm-start NR,34,0.0000,508.0000,,0.0000,677.8453,0.9434,1.0636,1,Line 2-3,113.7036,1,Bus 20,0.9434,0,,,2
+shared_qlim,18,Line 10-13,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.5612,0.9820,1.0636,2,Line 6-11,111.8117,0,,,0,,,3
+shared_qlim,19,Line 23-24,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,683.3991,0.9820,1.0636,2,Line 16-21,111.3206,0,,,0,,,2
+shared_qlim,20,Line 16-21,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,683.4814,0.9820,1.0636,1,Line 23-24,110.3878,0,,,0,,,2
+shared_qlim,21,Line 10-11,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,681.1534,0.9820,1.0636,1,Line 10-13,107.3625,0,,,0,,,3
+shared_qlim,22,Line 26-27,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,693.4868,0.9820,1.0773,1,Line 2-3,106.5101,0,,,4,Bus 26,1.0773,1
+shared_qlim,23,Line 6-11,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.5622,0.9820,1.0636,3,Line 4-14,105.9781,0,,,0,,,3
+shared_qlim,24,Gen 38,gen,solved,warm-start NR,,0.0000,830.0000,,0.0000,677.8121,0.9820,1.0636,1,Line 2-3,103.7027,0,,,0,,,1
+shared_qlim,25,Xfmr 29-38,trafo,solved,warm-start NR,38,0.0000,830.0000,,0.0000,677.8121,0.9820,1.0636,1,Line 2-3,103.7027,0,,,0,,,1
+shared_qlim,26,Line 4-14,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.6633,0.9820,1.0636,1,Line 6-11,103.3289,0,,,0,,,5
+shared_qlim,27,Line 16-24,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.2805,0.9820,1.0797,0,,,0,,,2,Bus 24,1.0797,3
+shared_qlim,28,Line 2-3,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,681.6082,0.9820,1.0711,0,,,0,,,3,Bus 2,1.0711,1
+shared_qlim,29,Line 3-4,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.2288,0.9820,1.0703,0,,,0,,,5,Bus 25,1.0703,5
+shared_qlim,30,Line 15-16,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,685.2005,0.9369,1.0636,0,,,1,Bus 15,0.9369,0,,,7
+shared_qlim,31,Line 8-9,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.8866,0.9733,1.0636,0,,,0,,,1,Bus 9,1.0615,3
+shared_qlim,32,Line 2-25,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,679.9648,0.9820,1.0636,0,,,0,,,2,Bus 2,1.0561,1
+shared_qlim,33,Gen 37,gen,solved,warm-start NR,,0.0000,540.0000,,0.0000,677.8277,0.9820,1.0636,0,,,0,,,1,Bus 2,1.0540,1
+shared_qlim,34,Xfmr 25-37,trafo,solved,warm-start NR,37,0.0000,540.0000,,0.0000,677.8277,0.9820,1.0636,0,,,0,,,1,Bus 2,1.0540,1
+shared_qlim,35,Gen 30,gen,solved,warm-start NR,,0.0000,250.0000,,0.0000,677.8857,0.9820,1.0636,0,,,0,,,0,,,1
+shared_qlim,36,Line 1-2,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.2338,0.9820,1.0636,0,,,0,,,0,,,3
+shared_qlim,37,Line 1-39,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.1023,0.9820,1.0636,0,,,0,,,0,,,6
+shared_qlim,38,Line 14-15,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.8524,0.9820,1.0636,0,,,0,,,0,,,3
+shared_qlim,39,Line 16-17,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.0206,0.9820,1.0636,0,,,0,,,0,,,4
+shared_qlim,40,Line 17-18,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.5957,0.9820,1.0636,0,,,0,,,0,,,7
+shared_qlim,41,Line 17-27,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.3249,0.9820,1.0636,0,,,0,,,0,,,5
+shared_qlim,42,Line 22-23,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.9825,0.9820,1.0636,0,,,0,,,0,,,6
+shared_qlim,43,Line 25-26,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.3966,0.9820,1.0636,0,,,0,,,0,,,2
+shared_qlim,44,Line 26-28,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.3492,0.9820,1.0636,0,,,0,,,0,,,2
+shared_qlim,45,Line 26-29,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.2965,0.9820,1.0636,0,,,0,,,0,,,2
+shared_qlim,46,Line 28-29,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,691.4188,0.9820,1.0636,0,,,0,,,0,,,2
+shared_qlim,47,Line 3-18,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.4992,0.9820,1.0636,0,,,0,,,0,,,5
+shared_qlim,48,Line 4-5,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,679.3236,0.9820,1.0636,0,,,0,,,0,,,3
+shared_qlim,49,Line 5-6,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.4072,0.9820,1.0636,0,,,0,,,0,,,3
+shared_qlim,50,Line 5-8,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.3882,0.9820,1.0636,0,,,0,,,0,,,5
+shared_qlim,51,Line 6-7,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.8394,0.9740,1.0636,0,,,0,,,0,,,3
+shared_qlim,52,Line 7-8,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,679.0688,0.9820,1.0636,0,,,0,,,0,,,5
+shared_qlim,53,Line 9-39,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.1112,0.9820,1.0636,0,,,0,,,0,,,4
+shared_qlim,54,Xfmr 11-12,trafo,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.9509,0.9794,1.0636,0,,,0,,,0,,,7
+shared_qlim,55,Xfmr 12-13,trafo,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.9423,0.9780,1.0636,0,,,0,,,0,,,7
+shared_qlim,56,Xfmr 2-30,trafo,solved,warm-start NR,30,0.0000,250.0000,,0.0000,677.8857,0.9820,1.0636,0,,,0,,,0,,,1
+shared_noqlim,1,Gen 39,gen,no_solution,,,0.0000,1000.0000,,0.0000,,,,0,,,0,,,0,,,0
+shared_noqlim,2,Line 16-19,line,solved,warm-start NR,19 20 33 34,680.0000,1140.0000,,0.0000,677.8626,0.9820,1.0636,1,Line 2-3,109.4639,0,,,0,,,2
+shared_noqlim,3,Xfmr 19-20,trafo,solved,warm-start NR,20 34,680.0000,508.0000,,0.0000,677.8031,0.9820,1.0636,0,,,0,,,0,,,6
+shared_noqlim,4,Xfmr 6-31,trafo,solved,warm-start NR,31,9.2000,677.8711,39,0.0000,1000.1897,0.9736,1.0636,2,Line 2-3,132.5322,0,,,0,,,1
+shared_noqlim,5,Line 21-22,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,697.2035,0.9820,1.0636,3,Line 23-24,157.5361,0,,,0,,,2
+shared_noqlim,6,Xfmr 10-32,trafo,solved,warm-start NR,32,0.0000,650.0000,,0.0000,677.9896,0.9749,1.0636,1,Line 2-3,134.2233,0,,,0,,,1
+shared_noqlim,7,Gen 32,gen,solved,warm-start NR,,0.0000,650.0000,,0.0000,677.9896,0.9244,1.0636,1,Line 2-3,134.2233,1,Bus 32,0.9244,0,,,1
+shared_noqlim,8,Gen 31,slack_gen,solved,warm-start NR,,0.0000,677.8711,39,0.0000,1000.1925,0.9150,1.0636,2,Line 2-3,133.5482,1,Bus 31,0.9150,0,,,1
+shared_noqlim,9,Line 13-14,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,681.6332,0.9820,1.0636,2,Line 6-11,132.5051,0,,,0,,,3
+shared_noqlim,10,Xfmr 22-35,trafo,solved,warm-start NR,35,0.0000,650.0000,,0.0000,677.8486,0.9820,1.0636,1,Line 2-3,129.8023,0,,,0,,,1
+shared_noqlim,11,Gen 35,gen,solved,warm-start NR,,0.0000,650.0000,,0.0000,677.8486,0.9820,1.0636,1,Line 2-3,129.8023,0,,,0,,,1
+shared_noqlim,12,Xfmr 19-33,trafo,solved,warm-start NR,33,0.0000,632.0000,,0.0000,677.8526,0.9820,1.0636,1,Line 2-3,126.5609,0,,,0,,,2
+shared_noqlim,13,Gen 33,gen,solved,warm-start NR,,0.0000,632.0000,,0.0000,677.8526,0.9671,1.0636,1,Line 2-3,126.5609,0,,,0,,,2
+shared_noqlim,14,Line 23-36,line,solved,warm-start NR,36,0.0000,560.0000,,0.0000,677.8551,0.9820,1.0522,1,Line 2-3,118.7154,0,,,0,,,1
+shared_noqlim,15,Gen 36,gen,solved,warm-start NR,,0.0000,560.0000,,0.0000,677.8551,0.9820,1.0522,1,Line 2-3,118.7154,0,,,0,,,1
+shared_noqlim,16,Xfmr 20-34,trafo,solved,warm-start NR,34,0.0000,508.0000,,0.0000,677.8594,0.9447,1.0636,1,Line 2-3,113.6559,1,Bus 20,0.9447,0,,,2
+shared_noqlim,17,Gen 34,gen,solved,warm-start NR,,0.0000,508.0000,,0.0000,677.8594,0.9363,1.0636,1,Line 2-3,113.6559,2,Bus 34,0.9363,0,,,2
+shared_noqlim,18,Line 10-13,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.5587,0.9820,1.0636,2,Line 6-11,111.8080,0,,,0,,,3
+shared_noqlim,19,Line 23-24,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,683.3866,0.9820,1.0636,2,Line 16-21,111.3016,0,,,0,,,2
+shared_noqlim,20,Line 16-21,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,683.4703,0.9820,1.0636,1,Line 23-24,110.3678,0,,,0,,,2
+shared_noqlim,21,Line 10-11,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,681.1523,0.9820,1.0636,1,Line 10-13,107.3595,0,,,0,,,3
+shared_noqlim,22,Line 26-27,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,693.9968,0.9820,1.0740,1,Line 2-3,106.2692,0,,,4,Bus 26,1.0740,1
+shared_noqlim,23,Line 6-11,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.5604,0.9820,1.0636,3,Line 4-14,105.9754,0,,,0,,,3
+shared_noqlim,24,Xfmr 29-38,trafo,solved,warm-start NR,38,0.0000,830.0000,,0.0000,677.8291,0.9820,1.0636,1,Line 2-3,103.6414,0,,,0,,,1
+shared_noqlim,25,Gen 38,gen,solved,warm-start NR,,0.0000,830.0000,,0.0000,677.8291,0.9820,1.0636,1,Line 2-3,103.6414,0,,,0,,,1
+shared_noqlim,26,Line 4-14,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.6633,0.9820,1.0636,1,Line 6-11,103.3289,0,,,0,,,5
+shared_noqlim,27,Line 16-24,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.2711,0.9820,1.0798,0,,,0,,,2,Bus 24,1.0798,3
+shared_noqlim,28,Line 15-16,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,685.2081,0.9369,1.0636,0,,,1,Bus 15,0.9369,0,,,7
+shared_noqlim,29,Line 8-9,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.8840,0.9734,1.0636,0,,,0,,,1,Bus 9,1.0615,3
+shared_noqlim,30,Line 2-3,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,681.3540,0.9820,1.0636,0,,,0,,,1,Bus 2,1.0600,2
+shared_noqlim,31,Line 3-4,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.4111,0.9816,1.0636,0,,,0,,,1,Bus 2,1.0548,7
+shared_noqlim,32,Line 2-25,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,679.9514,0.9820,1.0636,0,,,0,,,1,Bus 2,1.0541,1
+shared_noqlim,33,Xfmr 25-37,trafo,solved,warm-start NR,37,0.0000,540.0000,,0.0000,677.8414,0.9820,1.0636,0,,,0,,,1,Bus 2,1.0540,1
+shared_noqlim,34,Gen 37,gen,solved,warm-start NR,,0.0000,540.0000,,0.0000,677.8414,0.9820,1.0636,0,,,0,,,1,Bus 2,1.0540,1
+shared_noqlim,35,Gen 30,gen,solved,warm-start NR,,0.0000,250.0000,,0.0000,677.8993,0.9820,1.0636,0,,,0,,,0,,,1
+shared_noqlim,36,Line 1-2,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.2327,0.9820,1.0636,0,,,0,,,0,,,3
+shared_noqlim,37,Line 1-39,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.1050,0.9820,1.0636,0,,,0,,,0,,,6
+shared_noqlim,38,Line 14-15,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.8520,0.9820,1.0636,0,,,0,,,0,,,3
+shared_noqlim,39,Line 16-17,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.0146,0.9820,1.0636,0,,,0,,,0,,,4
+shared_noqlim,40,Line 17-18,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.6362,0.9820,1.0636,0,,,0,,,0,,,7
+shared_noqlim,41,Line 17-27,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.3232,0.9820,1.0636,0,,,0,,,0,,,5
+shared_noqlim,42,Line 22-23,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.9880,0.9820,1.0636,0,,,0,,,0,,,5
+shared_noqlim,43,Line 25-26,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.4055,0.9820,1.0636,0,,,0,,,0,,,2
+shared_noqlim,44,Line 26-28,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.3471,0.9820,1.0636,0,,,0,,,0,,,2
+shared_noqlim,45,Line 26-29,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.2936,0.9820,1.0636,0,,,0,,,0,,,2
+shared_noqlim,46,Line 28-29,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,691.4141,0.9820,1.0636,0,,,0,,,0,,,2
+shared_noqlim,47,Line 3-18,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.4989,0.9820,1.0636,0,,,0,,,0,,,5
+shared_noqlim,48,Line 4-5,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,679.3220,0.9820,1.0636,0,,,0,,,0,,,3
+shared_noqlim,49,Line 5-6,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.4048,0.9820,1.0636,0,,,0,,,0,,,3
+shared_noqlim,50,Line 5-8,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.3967,0.9820,1.0636,0,,,0,,,0,,,5
+shared_noqlim,51,Line 6-7,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.8384,0.9740,1.0636,0,,,0,,,0,,,4
+shared_noqlim,52,Line 7-8,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,679.0754,0.9820,1.0636,0,,,0,,,0,,,5
+shared_noqlim,53,Line 9-39,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.1126,0.9820,1.0636,0,,,0,,,0,,,4
+shared_noqlim,54,Xfmr 11-12,trafo,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.9613,0.9794,1.0636,0,,,0,,,0,,,6
+shared_noqlim,55,Xfmr 12-13,trafo,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.9575,0.9780,1.0636,0,,,0,,,0,,,7
+shared_noqlim,56,Xfmr 2-30,trafo,solved,warm-start NR,30,0.0000,250.0000,,0.0000,677.8993,0.9820,1.0636,0,,,0,,,0,,,1
+single_qlim,1,Gen 39,gen,implausible_solution,dc-start Iwamoto NR,,0.0000,1000.0000,,0.0000,1715.7986,0.9820,1.3372,0,,,0,,,0,,,0
+single_qlim,2,Xfmr 19-20,trafo,solved,warm-start NR,20 34,680.0000,508.0000,,0.0000,507.3668,0.9820,1.0636,1,Line 16-19,100.9181,0,,,0,,,4
+single_qlim,3,Line 16-19,line,solved,warm-start NR,19 20 33 34,680.0000,1140.0000,,0.0000,1132.4084,0.9820,1.0636,0,,,0,,,0,,,2
+single_qlim,4,Xfmr 6-31,trafo,solved,warm-start NR,31,9.2000,677.8575,39,0.0000,1672.8321,0.9762,1.0636,1,Line 2-3,107.2111,0,,,0,,,2
+single_qlim,5,Line 21-22,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,697.3015,0.9768,1.0636,3,Line 23-24,157.7194,0,,,0,,,2
+single_qlim,6,Line 13-14,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,681.6354,0.9820,1.0636,2,Line 6-11,132.5080,0,,,0,,,3
+single_qlim,7,Line 10-13,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.5612,0.9820,1.0636,2,Line 6-11,111.8117,0,,,0,,,3
+single_qlim,8,Line 23-24,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,683.3991,0.9820,1.0636,2,Line 16-21,111.3206,0,,,0,,,2
+single_qlim,9,Line 16-21,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,683.4814,0.9820,1.0636,1,Line 23-24,110.3878,0,,,0,,,2
+single_qlim,10,Gen 38,gen,solved,warm-start NR,,0.0000,830.0000,,0.0000,1523.8040,0.9572,1.0636,2,Line 4-5,108.3895,0,,,0,,,1
+single_qlim,11,Xfmr 29-38,trafo,solved,warm-start NR,38,0.0000,830.0000,,0.0000,1523.8040,0.9572,1.0636,2,Line 4-5,108.3895,0,,,0,,,1
+single_qlim,12,Gen 31,slack_gen,solved,warm-start NR,,0.0000,677.8575,39,0.0000,1682.2919,0.9186,1.0636,1,Line 2-3,107.8860,1,Bus 31,0.9186,0,,,2
+single_qlim,13,Line 10-11,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,681.1534,0.9820,1.0636,1,Line 10-13,107.3625,0,,,0,,,3
+single_qlim,14,Line 26-27,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,693.4868,0.9820,1.0773,1,Line 2-3,106.5101,0,,,4,Bus 26,1.0773,1
+single_qlim,15,Line 6-11,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.5622,0.9820,1.0636,3,Line 4-14,105.9781,0,,,0,,,3
+single_qlim,16,Line 4-14,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.6633,0.9820,1.0636,1,Line 6-11,103.3289,0,,,0,,,5
+single_qlim,17,Gen 32,gen,solved,warm-start NR,,0.0000,650.0000,,0.0000,1328.5065,0.9075,1.0636,0,,,1,Bus 32,0.9075,0,,,2
+single_qlim,18,Line 16-24,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.2805,0.9820,1.0797,0,,,0,,,2,Bus 24,1.0797,3
+single_qlim,19,Line 2-3,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,681.6082,0.9820,1.0711,0,,,0,,,3,Bus 2,1.0711,1
+single_qlim,20,Line 3-4,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.2288,0.9820,1.0703,0,,,0,,,5,Bus 25,1.0703,5
+single_qlim,21,Gen 34,gen,solved,warm-start NR,,0.0000,508.0000,,0.0000,1188.4343,0.9316,1.0636,0,,,2,Bus 34,0.9316,0,,,2
+single_qlim,22,Line 15-16,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,685.2005,0.9369,1.0636,0,,,1,Bus 15,0.9369,0,,,7
+single_qlim,23,Line 8-9,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.8866,0.9733,1.0636,0,,,0,,,1,Bus 9,1.0615,3
+single_qlim,24,Xfmr 20-34,trafo,solved,warm-start NR,34,0.0000,508.0000,,0.0000,1188.4343,0.9400,1.0636,0,,,1,Bus 20,0.9400,0,,,2
+single_qlim,25,Line 2-25,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,679.9648,0.9820,1.0636,0,,,0,,,2,Bus 2,1.0561,1
+single_qlim,26,Gen 37,gen,solved,warm-start NR,,0.0000,540.0000,,0.0000,1218.2931,0.9816,1.0636,0,,,0,,,1,Bus 2,1.0512,1
+single_qlim,27,Xfmr 25-37,trafo,solved,warm-start NR,37,0.0000,540.0000,,0.0000,1218.2931,0.9816,1.0636,0,,,0,,,1,Bus 2,1.0512,1
+single_qlim,28,Gen 33,gen,solved,warm-start NR,,0.0000,632.0000,,0.0000,1311.7484,0.9490,1.0636,0,,,1,Bus 33,0.9490,0,,,2
+single_qlim,29,Gen 30,gen,solved,warm-start NR,,0.0000,250.0000,,0.0000,929.7945,0.9820,1.0636,0,,,0,,,0,,,1
+single_qlim,30,Gen 35,gen,solved,warm-start NR,,0.0000,650.0000,,0.0000,1330.5378,0.9742,1.0636,0,,,0,,,0,,,2
+single_qlim,31,Gen 36,gen,solved,warm-start NR,,0.0000,560.0000,,0.0000,1237.0863,0.9816,1.0540,0,,,0,,,0,,,1
+single_qlim,32,Line 1-2,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.2338,0.9820,1.0636,0,,,0,,,0,,,3
+single_qlim,33,Line 1-39,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.1023,0.9820,1.0636,0,,,0,,,0,,,6
+single_qlim,34,Line 14-15,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.8524,0.9820,1.0636,0,,,0,,,0,,,3
+single_qlim,35,Line 16-17,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.0206,0.9820,1.0636,0,,,0,,,0,,,4
+single_qlim,36,Line 17-18,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.5957,0.9820,1.0636,0,,,0,,,0,,,7
+single_qlim,37,Line 17-27,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.3249,0.9820,1.0636,0,,,0,,,0,,,5
+single_qlim,38,Line 22-23,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.9825,0.9820,1.0636,0,,,0,,,0,,,6
+single_qlim,39,Line 23-36,line,solved,warm-start NR,36,0.0000,560.0000,,0.0000,1237.0863,0.9816,1.0540,0,,,0,,,0,,,1
+single_qlim,40,Line 25-26,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.3966,0.9820,1.0636,0,,,0,,,0,,,2
+single_qlim,41,Line 26-28,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.3492,0.9820,1.0636,0,,,0,,,0,,,2
+single_qlim,42,Line 26-29,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.2965,0.9820,1.0636,0,,,0,,,0,,,2
+single_qlim,43,Line 28-29,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,691.4188,0.9820,1.0636,0,,,0,,,0,,,2
+single_qlim,44,Line 3-18,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.4992,0.9820,1.0636,0,,,0,,,0,,,5
+single_qlim,45,Line 4-5,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,679.3236,0.9820,1.0636,0,,,0,,,0,,,3
+single_qlim,46,Line 5-6,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.4072,0.9820,1.0636,0,,,0,,,0,,,3
+single_qlim,47,Line 5-8,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.3882,0.9820,1.0636,0,,,0,,,0,,,5
+single_qlim,48,Line 6-7,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.8394,0.9740,1.0636,0,,,0,,,0,,,3
+single_qlim,49,Line 7-8,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,679.0688,0.9820,1.0636,0,,,0,,,0,,,5
+single_qlim,50,Line 9-39,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.1112,0.9820,1.0636,0,,,0,,,0,,,4
+single_qlim,51,Xfmr 10-32,trafo,solved,warm-start NR,32,0.0000,650.0000,,0.0000,1328.5065,0.9564,1.0636,0,,,0,,,0,,,2
+single_qlim,52,Xfmr 11-12,trafo,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.9509,0.9794,1.0636,0,,,0,,,0,,,7
+single_qlim,53,Xfmr 12-13,trafo,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.9423,0.9780,1.0636,0,,,0,,,0,,,7
+single_qlim,54,Xfmr 19-33,trafo,solved,warm-start NR,33,0.0000,632.0000,,0.0000,1311.7484,0.9579,1.0636,0,,,0,,,0,,,2
+single_qlim,55,Xfmr 2-30,trafo,solved,warm-start NR,30,0.0000,250.0000,,0.0000,929.7945,0.9820,1.0636,0,,,0,,,0,,,1
+single_qlim,56,Xfmr 22-35,trafo,solved,warm-start NR,35,0.0000,650.0000,,0.0000,1330.5378,0.9742,1.0636,0,,,0,,,0,,,2
+single_noqlim,1,Gen 39,gen,no_solution,,,0.0000,1000.0000,,0.0000,,,,0,,,0,,,0,,,0
+single_noqlim,2,Xfmr 19-20,trafo,solved,warm-start NR,20 34,680.0000,508.0000,,0.0000,507.3790,0.9820,1.0636,1,Line 16-19,100.9218,0,,,0,,,4
+single_noqlim,3,Line 16-19,line,solved,warm-start NR,19 20 33 34,680.0000,1140.0000,,0.0000,1132.4084,0.9820,1.0636,0,,,0,,,0,,,2
+single_noqlim,4,Xfmr 6-31,trafo,solved,warm-start NR,31,9.2000,677.8711,39,0.0000,1672.8264,0.9763,1.0636,1,Line 2-3,107.1845,0,,,0,,,2
+single_noqlim,5,Line 21-22,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,697.2035,0.9820,1.0636,3,Line 23-24,157.5361,0,,,0,,,2
+single_noqlim,6,Line 13-14,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,681.6332,0.9820,1.0636,2,Line 6-11,132.5051,0,,,0,,,3
+single_noqlim,7,Line 10-13,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.5587,0.9820,1.0636,2,Line 6-11,111.8080,0,,,0,,,3
+single_noqlim,8,Line 23-24,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,683.3866,0.9820,1.0636,2,Line 16-21,111.3016,0,,,0,,,2
+single_noqlim,9,Line 16-21,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,683.4703,0.9820,1.0636,1,Line 23-24,110.3678,0,,,0,,,2
+single_noqlim,10,Gen 31,slack_gen,solved,warm-start NR,,0.0000,677.8711,39,0.0000,1682.2859,0.9187,1.0636,1,Line 2-3,107.8580,1,Bus 31,0.9187,0,,,2
+single_noqlim,11,Xfmr 29-38,trafo,solved,warm-start NR,38,0.0000,830.0000,,0.0000,1523.2800,0.9618,1.0636,2,Line 4-5,107.7830,0,,,0,,,1
+single_noqlim,12,Gen 38,gen,solved,warm-start NR,,0.0000,830.0000,,0.0000,1523.2800,0.9618,1.0636,2,Line 4-5,107.7830,0,,,0,,,1
+single_noqlim,13,Line 10-11,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,681.1523,0.9820,1.0636,1,Line 10-13,107.3595,0,,,0,,,3
+single_noqlim,14,Line 26-27,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,693.9968,0.9820,1.0740,1,Line 2-3,106.2692,0,,,4,Bus 26,1.0740,1
+single_noqlim,15,Line 6-11,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.5604,0.9820,1.0636,3,Line 4-14,105.9754,0,,,0,,,3
+single_noqlim,16,Line 4-14,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.6633,0.9820,1.0636,1,Line 6-11,103.3289,0,,,0,,,5
+single_noqlim,17,Gen 32,gen,solved,warm-start NR,,0.0000,650.0000,,0.0000,1328.4948,0.9078,1.0636,0,,,1,Bus 32,0.9078,0,,,2
+single_noqlim,18,Line 16-24,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.2711,0.9820,1.0798,0,,,0,,,2,Bus 24,1.0798,3
+single_noqlim,19,Gen 34,gen,solved,warm-start NR,,0.0000,508.0000,,0.0000,1188.3825,0.9351,1.0636,0,,,2,Bus 34,0.9351,0,,,2
+single_noqlim,20,Line 15-16,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,685.2081,0.9369,1.0636,0,,,1,Bus 15,0.9369,0,,,7
+single_noqlim,21,Line 8-9,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.8840,0.9734,1.0636,0,,,0,,,1,Bus 9,1.0615,3
+single_noqlim,22,Line 2-3,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,681.3540,0.9820,1.0636,0,,,0,,,1,Bus 2,1.0600,2
+single_noqlim,23,Xfmr 20-34,trafo,solved,warm-start NR,34,0.0000,508.0000,,0.0000,1188.3825,0.9435,1.0636,0,,,1,Bus 20,0.9435,0,,,2
+single_noqlim,24,Line 3-4,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.4111,0.9816,1.0636,0,,,0,,,1,Bus 2,1.0548,7
+single_noqlim,25,Line 2-25,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,679.9514,0.9820,1.0636,0,,,0,,,1,Bus 2,1.0541,1
+single_noqlim,26,Gen 37,gen,solved,warm-start NR,,0.0000,540.0000,,0.0000,1218.2882,0.9816,1.0636,0,,,0,,,1,Bus 2,1.0512,1
+single_noqlim,27,Xfmr 25-37,trafo,solved,warm-start NR,37,0.0000,540.0000,,0.0000,1218.2882,0.9816,1.0636,0,,,0,,,1,Bus 2,1.0512,1
+single_noqlim,28,Gen 30,gen,solved,warm-start NR,,0.0000,250.0000,,0.0000,929.7891,0.9820,1.0636,0,,,0,,,0,,,1
+single_noqlim,29,Gen 33,gen,solved,warm-start NR,,0.0000,632.0000,,0.0000,1311.6380,0.9647,1.0636,0,,,0,,,0,,,2
+single_noqlim,30,Gen 35,gen,solved,warm-start NR,,0.0000,650.0000,,0.0000,1330.5233,0.9744,1.0636,0,,,0,,,0,,,2
+single_noqlim,31,Gen 36,gen,solved,warm-start NR,,0.0000,560.0000,,0.0000,1237.0840,0.9817,1.0540,0,,,0,,,0,,,1
+single_noqlim,32,Line 1-2,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.2327,0.9820,1.0636,0,,,0,,,0,,,3
+single_noqlim,33,Line 1-39,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.1050,0.9820,1.0636,0,,,0,,,0,,,6
+single_noqlim,34,Line 14-15,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.8520,0.9820,1.0636,0,,,0,,,0,,,3
+single_noqlim,35,Line 16-17,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.0146,0.9820,1.0636,0,,,0,,,0,,,4
+single_noqlim,36,Line 17-18,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.6362,0.9820,1.0636,0,,,0,,,0,,,7
+single_noqlim,37,Line 17-27,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.3232,0.9820,1.0636,0,,,0,,,0,,,5
+single_noqlim,38,Line 22-23,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.9880,0.9820,1.0636,0,,,0,,,0,,,5
+single_noqlim,39,Line 23-36,line,solved,warm-start NR,36,0.0000,560.0000,,0.0000,1237.0840,0.9817,1.0540,0,,,0,,,0,,,1
+single_noqlim,40,Line 25-26,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.4055,0.9820,1.0636,0,,,0,,,0,,,2
+single_noqlim,41,Line 26-28,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.3471,0.9820,1.0636,0,,,0,,,0,,,2
+single_noqlim,42,Line 26-29,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.2936,0.9820,1.0636,0,,,0,,,0,,,2
+single_noqlim,43,Line 28-29,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,691.4141,0.9820,1.0636,0,,,0,,,0,,,2
+single_noqlim,44,Line 3-18,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.4989,0.9820,1.0636,0,,,0,,,0,,,5
+single_noqlim,45,Line 4-5,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,679.3220,0.9820,1.0636,0,,,0,,,0,,,3
+single_noqlim,46,Line 5-6,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.4048,0.9820,1.0636,0,,,0,,,0,,,3
+single_noqlim,47,Line 5-8,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,680.3967,0.9820,1.0636,0,,,0,,,0,,,5
+single_noqlim,48,Line 6-7,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,682.8384,0.9740,1.0636,0,,,0,,,0,,,4
+single_noqlim,49,Line 7-8,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,679.0754,0.9820,1.0636,0,,,0,,,0,,,5
+single_noqlim,50,Line 9-39,line,solved,warm-start NR,,0.0000,0.0000,,0.0000,678.1126,0.9820,1.0636,0,,,0,,,0,,,4
+single_noqlim,51,Xfmr 10-32,trafo,solved,warm-start NR,32,0.0000,650.0000,,0.0000,1328.4948,0.9566,1.0636,0,,,0,,,0,,,2
+single_noqlim,52,Xfmr 11-12,trafo,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.9613,0.9794,1.0636,0,,,0,,,0,,,6
+single_noqlim,53,Xfmr 12-13,trafo,solved,warm-start NR,,0.0000,0.0000,,0.0000,677.9575,0.9780,1.0636,0,,,0,,,0,,,7
+single_noqlim,54,Xfmr 19-33,trafo,solved,warm-start NR,33,0.0000,632.0000,,0.0000,1311.6380,0.9765,1.0636,0,,,0,,,0,,,2
+single_noqlim,55,Xfmr 2-30,trafo,solved,warm-start NR,30,0.0000,250.0000,,0.0000,929.7891,0.9820,1.0636,0,,,0,,,0,,,1
+single_noqlim,56,Xfmr 22-35,trafo,solved,warm-start NR,35,0.0000,650.0000,,0.0000,1330.5233,0.9744,1.0636,0,,,0,,,0,,,2

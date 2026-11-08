@@ -75,6 +75,10 @@ def main():
             steps.append(s)
         _csv(pd.concat(rows), "hosting_breaches.csv")
         _csv(pd.concat(steps), "hosting_steps.csv")
+    step("hosting summary")
+    rows = pd.read_csv(C.RESULTS / "hosting_breaches.csv")
+    steps = pd.read_csv(C.RESULTS / "hosting_steps.csv")
+    _csv(hosting.summarise(rows, steps), "hosting_capacity.csv")
     step("done")
 
 

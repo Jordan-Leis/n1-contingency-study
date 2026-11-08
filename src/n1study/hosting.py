@@ -78,4 +78,63 @@ def sweep(dispatch):
             steps.append(dict(tag, stopped=""))
             mw += C.HOSTING_STEP_MW
     cols = ["dispatch", "bus", "solar_mw", "contingency", "kind", "element", "value", "reference", "already_out_at_0mw"]
-    return pd.DataFrame(rows, columns=cols), pd.DataFrame(steps)
+    return keep_informative(pd.DataFrame(rows, columns=cols)), pd.DataFrame(steps)
+
+
+SOLVE_FAIL = ("no_solution", "implausible_solution")
+
+
+def keep_informative(rows):
+    """Drop rows that are already out at 0 MW and no worse now; no definition below uses them."""
+    new = ~rows.already_out_at_0mw.astype("boolean").fillna(False)
+    worse = ((rows.kind == "overload") & (rows.value > rows.reference)) | \
+            ((rows.kind == "high_voltage") & (rows.value > rows.reference)) | \
+            ((rows.kind == "low_voltage") & (rows.value < rows.reference))
+    return rows[new | worse | rows.kind.isin(SOLVE_FAIL)].reset_index(drop=True)
+
+
+DEFINITIONS = {
+    "any_new": "any limit crossing the same contingency did not show at 0 MW, however small",
+    "screening": "a new overload, a new voltage violation more than 0.005 pu past the band, or a solve that fails",
+    "no_outage_only": "the screening rule applied to the no-outage case alone, ignoring N-1",
+}
+
+
+def _fails(x, name):
+    new = ~x.already_out_at_0mw.astype("boolean").fillna(False)
+    solve_fail = x.kind.isin(SOLVE_FAIL)
+    past = (x.value - C.V_MAX_PU).where(x.kind == "high_voltage", (C.V_MIN_PU - x.value))
+    screening = solve_fail | (new & ((x.kind == "overload") | (past > C.WORSENED_V_PU)))
+    if name == "any_new":
+        return solve_fail | new
+    if name == "screening":
+        return screening
+    return screening & x.contingency.eq(BASE)
+
+
+def summarise(rows, steps):
+    """One row per dispatch, bus and definition: hosting MW and what stopped it."""
+    out = []
+    for (d, b), g in rows.groupby(["dispatch", "bus"]):
+        st = steps[(steps.dispatch == d) & (steps.bus == b)]
+        tested = float(st.solar_mw[st.stopped.fillna("") == ""].max())
+        for name in DEFINITIONS:
+            hit = g[_fails(g, name)]
+            if hit.empty:
+                out.append(dict(dispatch=d, bus=b, definition=name, hosting_mw=tested, capped=True,
+                                limit_mw=float("nan"), limit_contingency="", limit_element="", limit_kind="",
+                                limit_value=float("nan"), limit_reference=float("nan")))
+                continue
+            first = float(hit.solar_mw.min())
+            at = hit[hit.solar_mw == first]
+            sf = at[at.kind.isin(SOLVE_FAIL)]
+            if not sf.empty:
+                r = sf.iloc[0]
+            else:
+                sev = (at.value - C.THERMAL_LIMIT_PCT).where(at.kind == "overload",
+                                                             100 * (at.value - 1.0).abs())
+                r = at.loc[sev.idxmax()]
+            out.append(dict(dispatch=d, bus=b, definition=name, hosting_mw=first - C.HOSTING_STEP_MW, capped=False,
+                            limit_mw=first, limit_contingency=r.contingency, limit_element=r.element if isinstance(r.element, str) else "",
+                            limit_kind=r.kind, limit_value=r.value, limit_reference=r.reference))
+    return pd.DataFrame(out)

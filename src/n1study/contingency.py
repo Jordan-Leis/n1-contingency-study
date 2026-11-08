@@ -115,11 +115,13 @@ def run_case(base_net, c, dispatch, qlims, slack_target_mw):
         attempt = solve(net, qlims)
 
     status = "solved"
+    vm_lo = vm_hi = float("nan")
     if attempt is None:
         status = "no_solution"
     else:
         vm = net.res_bus.vm_pu.dropna()
-        if vm.min() < C.V_PLAUSIBLE_PU[0] or vm.max() > C.V_PLAUSIBLE_PU[1]:
+        vm_lo, vm_hi = float(vm.min()), float(vm.max())
+        if vm_lo < C.V_PLAUSIBLE_PU[0] or vm_hi > C.V_PLAUSIBLE_PU[1]:
             status = "implausible_solution"
 
     facts = dict(
@@ -127,6 +129,7 @@ def run_case(base_net, c, dispatch, qlims, slack_target_mw):
         islanded_buses=" ".join(str(bus_no(net, b)) for b in dead), load_lost_mw=lost_load,
         gen_lost_mw=lost_gen, new_slack_bus=new_slack or "", reserve_shortfall_mw=shortfall,
         slack_mw=float(net.res_ext_grid.p_mw[net.ext_grid.in_service].sum()) if attempt else float("nan"),
+        solved_vm_min_pu=vm_lo, solved_vm_max_pu=vm_hi,
     )
     return (net if status == "solved" else None), facts
 
