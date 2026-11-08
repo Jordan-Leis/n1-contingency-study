@@ -87,9 +87,12 @@ SOLVE_FAIL = ("no_solution", "implausible_solution")
 def keep_informative(rows):
     """Drop rows that are already out at 0 MW and no worse now; no definition below uses them."""
     new = ~rows.already_out_at_0mw.astype("boolean").fillna(False)
-    worse = ((rows.kind == "overload") & (rows.value > rows.reference)) | \
-            ((rows.kind == "high_voltage") & (rows.value > rows.reference)) | \
-            ((rows.kind == "low_voltage") & (rows.value < rows.reference))
+    # Compare at the precision the CSV stores, so filtering live rows and re-filtering
+    # the written file give the same answer (float noise is ~1e-12).
+    val, ref = rows.value.round(4), rows.reference.round(4)
+    worse = ((rows.kind == "overload") & (val > ref)) | \
+            ((rows.kind == "high_voltage") & (val > ref)) | \
+            ((rows.kind == "low_voltage") & (val < ref))
     return rows[new | worse | rows.kind.isin(SOLVE_FAIL)].reset_index(drop=True)
 
 
