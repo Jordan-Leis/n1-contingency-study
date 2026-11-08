@@ -90,7 +90,7 @@ def sections(f):
                     f"{f['q_last']:.0f} Mvar (bus 39 at {f['v_last']:.3f} pu), when the other machines are also "
                     f"{f['g39_short']:.0f} MW short of real power."),
         ("What the assumptions change", f"Line 2-3 is the worst element in {f['l23_gen']} of {f['n_gen_solved']} solved "
-                    f"machine outages mainly because {f['g30']:.0f} of the {f['head']:.0f} MW of headroom sits on Gen 30. "
+                    f"machine outages mainly because {fmt(f['g30'])} of the {fmt(f['head'])} MW of headroom sits on Gen 30. "
                     f"With the swing machine taking all lost MW instead, {f['s_over']} outages overload rather than "
                     f"{f['over']}. For solar, the rule matters as much as the bus: under the N-1 study's own rule, "
                     f"{f['n_under']} of {f['n_cases']} bus and dispatch cases take under {fmt(C.HOSTING_STEP_MW)} MW, "

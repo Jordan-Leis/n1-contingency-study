@@ -115,7 +115,7 @@ def draw(path):
             ax.text(gx, gy, "G", fontsize=6.4, ha="center", va="center", color=MUTED, zorder=5)
 
     g39 = cases[cases.label == "Gen 39"].iloc[0]
-    ax.annotate("Gen 39 out: no AC solution found\n(1,000 MW and its vars lost)", xy=(0.3, 2.6), xytext=(-0.6, 0.45),
+    ax.annotate("Gen 39 (external-system equivalent) out:\nno AC solution found; model boundary", xy=(0.3, 2.6), xytext=(-0.6, 0.45),
                 fontsize=7.6, color=INK, ha="left", va="center", zorder=6,
                 bbox=dict(boxstyle="round,pad=0.22", fc=SURFACE, ec=CRITICAL, lw=0.8),
                 arrowprops=dict(arrowstyle="-", color=CRITICAL, lw=0.8))
