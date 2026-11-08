@@ -115,7 +115,7 @@ def draw(path):
             ax.text(gx, gy, "G", fontsize=6.4, ha="center", va="center", color=MUTED, zorder=5)
 
     g39 = cases[cases.label == "Gen 39"].iloc[0]
-    ax.annotate("Gen 39 (external-system equivalent) out:\nno AC solution found; model boundary", xy=(0.3, 2.6), xytext=(-0.6, 0.45),
+    ax.annotate("Gen 39 (external-system equivalent) out:\nno AC solution found; model boundary", xy=(0.3, 2.6), xytext=(-0.6, -0.55),
                 fontsize=7.6, color=INK, ha="left", va="center", zorder=6,
                 bbox=dict(boxstyle="round,pad=0.22", fc=SURFACE, ec=CRITICAL, lw=0.8),
                 arrowprops=dict(arrowstyle="-", color=CRITICAL, lw=0.8))
@@ -132,7 +132,7 @@ def draw(path):
     ax.legend(handles=keys, loc="upper center", bbox_to_anchor=(0.5, -0.005), ncol=3, frameon=False, fontsize=7.6,
               labelcolor=MUTED, handlelength=2.0, columnspacing=1.6)
     ax.set_xlim(-0.9, 19.1)
-    ax.set_ylim(-0.1, 14.5)
+    ax.set_ylim(-1.1, 14.5)
     ax.set_aspect("equal")
     ax.axis("off")
     fig.savefig(path, bbox_inches="tight", facecolor=SURFACE, metadata={"Software": None})
