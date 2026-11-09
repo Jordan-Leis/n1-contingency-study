@@ -179,3 +179,5 @@ The checks are evidence that the code does what it says. They are not my own lin
 ## Data and licences
 
 Network data: the IEEE 39-bus New England case as shipped in [pandapower](https://www.pandapower.org/) (BSD-3-Clause), converted from [MATPOWER](https://matpower.org/)'s `case39` (BSD-3-Clause). Original source: G. W. Bills et al., *On-Line Stability Analysis Study*, EEI RP90-1, 1970. Ratings: MATPOWER's case header credits the TC Calculator data from PSERC (Cornell).
+
+Code in this repo: MIT licence, see [LICENSE](LICENSE).
